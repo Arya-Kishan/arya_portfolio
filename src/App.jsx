@@ -23,3 +23,31 @@ function App() {
 }
 
 export default App
+
+// import gsap from 'gsap'
+// import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+// gsap.registerPlugin(ScrollTrigge
+
+//   useLayoutEffect(() => {
+
+//   const ctx = gsap.context(() => {
+
+//     let t1 = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: '#about',
+//         // markers:true,
+//         start: "0% 80%",
+//         end: "0% 80%",
+//         scrub: 1,
+//       }
+//     })
+//       .from("#head", {
+//         opacity: 0,
+//         y: -100,
+//       }, "a")
+//   }, [parentRef])
+
+//   return () => ctx.revert();
+
+// }, [])

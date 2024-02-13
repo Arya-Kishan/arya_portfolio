@@ -1,9 +1,15 @@
 import React from 'react'
 import trailify from "../assets/trailify.png"
+import { motion } from 'framer-motion'
 
 export default function Card({ card }) {
     return (
-        <div className='w-[300px] h-[470px] md:w-[400px] md:min-h-[500px] rounded-lg shadow-lg flex flex-col items-start justify-evenly'>
+        <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: .1 }}
+            transition={{ duration: 0.4 }}
+            className='w-[300px] h-[470px] md:w-[400px] md:min-h-[500px] rounded-lg shadow-lg flex flex-col items-start justify-evenly'>
 
             <img src={card.pic} alt="" srcSet="" />
 
@@ -11,7 +17,7 @@ export default function Card({ card }) {
 
                 {/* TECH USED */}
                 <div className='flex gap-5'>
-                    {card.stack.map((e,i) => (
+                    {card.stack.map((e, i) => (
                         <p className='text-[14px] md:text-xl  bg-yellow-400 p-2 rounded-lg' key={i}>{e}</p>
                     ))}
                 </div>
@@ -32,6 +38,6 @@ export default function Card({ card }) {
 
             </div>
 
-        </div>
+        </motion.div>
     )
 }

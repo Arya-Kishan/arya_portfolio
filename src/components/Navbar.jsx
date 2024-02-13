@@ -25,12 +25,10 @@ export default function Navbar() {
                     y: -100,
                 },"a")
                 .from("#port", {
-                    opacity: 0,
                     duration: .5,
-                    x: -100,
+                    x: -200,
                 },"a")
                 .from("#right", {
-                    opacity: 0,
                     duration: .5,
                     x: 100,
                 },"a")

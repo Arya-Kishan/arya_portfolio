@@ -12,59 +12,41 @@ import firebase from '../assets/firebase.png'
 import node from '../assets/node.png'
 import tailwind from '../assets/tailwind.png'
 import mongo from '../assets/mongo.png'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { motion } from 'framer-motion'
 
 export default function Skills() {
 
-  gsap.registerPlugin(ScrollTrigger)
-  const parentRef = useRef()
   const mode = useSelector(selectMode)
   let skillsArr = [{ pic: react, text: 'React' }, { pic: redux, text: 'Redux' }, { pic: query, text: 'React Query' }, { pic: mongo, text: 'Mongo' }, { pic: express, text: 'Express' }, { pic: mui, text: 'Material UI' }, { pic: javascript, text: 'Javascript' }, { pic: firebase, text: 'Firebase' }, { pic: node, text: 'Node JS' }, { pic: tailwind, text: 'Tailwind CSS' }];
 
-  useLayoutEffect(() => {
-
-    const ctx = gsap.context(() => {
-
-      let t1 = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#skill',
-          // markers: true,
-          start: "0% 80%",
-          end: "0% 80%",
-          scrub: 1,
-        }
-      })
-        .from("#head", {
-          opacity: 0,
-          y: -100,
-        }, "a")
-    }, [parentRef])
-
-    return () => ctx.revert();
-
-  }, [])
 
   return (
-    <div ref={parentRef}>
-      <div id='skill'>
+    <div id='skill'>
 
-        <div id='head' className={`${mode} w-full text-5xl text-center uppercase`}>Skills</div>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        id='head' className={`${mode} w-full text-5xl text-center uppercase`}>Skills</motion.div>
 
-        <div className={`${mode} w-full p-5 md:p-10`}>
+      <div className={`${mode} w-full p-5 md:p-10`}>
 
-          <div className='flex flex-wrap gap-2 md:gap-10 justify-center items-center'>
-            {skillsArr.map((e, i) => (
-              <div className='flex flex-col items-center justify-center gap-2 w-[40vw] md:w-[300px] h-[100px] md:h-[200px] bg-yellow-400' key={i}>
-                <img className='w-6 md:w-12' src={e.pic} alt="" srcSet="" />
-                <p className='text-1xl md:text-2xl'>{e.text}</p>
-              </div>
-            ))}
-          </div>
-
+        <div className='flex flex-wrap gap-2 md:gap-10 justify-center items-center'>
+          {skillsArr.map((e, i) => (
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true}}
+              transition={{ duration: 0.4 }}
+              className='flex flex-col items-center justify-center gap-2 w-[40vw] md:w-[300px] h-[100px] md:h-[200px] bg-yellow-400' key={i}>
+              <img className='w-6 md:w-12' src={e.pic} alt="" srcSet="" />
+              <p className='text-1xl md:text-2xl'>{e.text}</p>
+            </motion.div>
+          ))}
         </div>
 
       </div>
+
     </div>
   )
 }

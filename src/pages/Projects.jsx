@@ -7,13 +7,10 @@ import aryazon from "../assets/aryazon.png"
 import quiz from "../assets/quiz.png"
 import tic from "../assets/tic.png"
 import pika from "../assets/pika.png"
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { motion } from 'framer-motion'
 
 export default function Projects() {
 
-  gsap.registerPlugin(ScrollTrigger)
-  const parentRef = useRef()
   const mode = useSelector(selectMode)
   let project = [{
     name: "Aryazon",
@@ -57,40 +54,19 @@ export default function Projects() {
     git: "https://github.com/Arya-Kishan/tic-tac-toe"
   }]
 
-  useLayoutEffect(() => {
-
-    const ctx = gsap.context(() => {
-
-      let t1 = gsap.timeline({
-        scrollTrigger: {
-          trigger: '#project',
-          // markers: true,
-          start: "0% 80%",
-          end: "0% 80%",
-          scrub: 1,
-        }
-      })
-        .from("#head", {
-          opacity: 0,
-          y: -100,
-        }, "a")
-    }, [parentRef])
-
-    return () => ctx.revert();
-
-  }, [])
-
   return (
-    <div ref={parentRef}>
-      <div id='project' className='p-2'>
+    <div id='project' className='p-2'>
 
-        <div id='head' className={`${mode} w-full text-5xl text-center uppercase`}>Projects</div>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        id='head' className={`${mode} w-full text-5xl text-center uppercase`}>Projects</motion.div>
 
-        <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-start p-10`}>
-          {project.map((e, i) => <Card key={i} card={e} />)}
-        </div>
-
+      <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-start p-10`}>
+        {project.map((e, i) => <Card key={i} card={e} />)}
       </div>
+
     </div>
   )
 }

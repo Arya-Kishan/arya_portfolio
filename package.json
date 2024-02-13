@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-email/render": "^0.0.12",
     "@reduxjs/toolkit": "^2.1.0",
+    "framer-motion": "^11.0.3",
     "gsap": "^3.12.5",
     "nodemailer": "^6.9.9",
     "react": "^18.2.0",
