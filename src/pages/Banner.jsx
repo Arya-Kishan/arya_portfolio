@@ -23,22 +23,21 @@ export default function Banner() {
                     opacity: 0,
                     duration: 1,
                     y: "100%",
-                },"a")
+                }, "a")
                 .from("#icon", {
                     opacity: 0,
-                    duration: .5,
+                    duration: 1,
                     y: "100%",
                 })
                 .from("svg", {
                     opacity: 0,
                     duration: 1,
                     scale:0,
-                    x: "40%",
-                },"a")
+                }, "a")
                 .from("button", {
                     duration: 1,
                     y: 150,
-                },"a")
+                }, "a")
         }, [parentRef])
 
         return () => ctx.revert();
@@ -46,9 +45,9 @@ export default function Banner() {
     }, [])
 
     return (
-        <div ref={parentRef} id='banner' className={`${mode} w-full h-[calc(100vh-70px)] grid grid-cols-1 md:grid-cols-2 place-items-center p-2`}>
+        <div ref={parentRef} id='banner' className={`${mode} w-full h-[calc(100vh-70px)] grid grid-cols-1 md:grid-cols-2 place-items-center p-2 relative overflow-hidden`}>
 
-            <div className='w-full h-fullbg-red-200 flex flex-col items-center justify-center gap-8'>
+            <div className='w-full h-fullbg-red-200 flex flex-col items-center justify-center gap-8 z-9'>
 
                 <div className='w-full h-fullbg-red-200 flex flex-col items-center justify-center gap-3'>
                     <div className='text-xl md:text-6xl overflow-hidden '><p id='name1'>Hii I'm</p></div>
@@ -69,13 +68,13 @@ export default function Banner() {
                 </div>
 
                 <div className='flex gap-10 overflow-hidden'>
-                    <button className='text-1xl md:text-xl bg-yellow-500 rounded-lg px-3 py-2'><a href={aryaCV} download="">Check CV</a></button>
-                    <button className='text-1xl md:text-xl bg-yellow-500 rounded-lg px-3 py-2'>Contact</button>
+                    <button className='text-1xl md:text-xl bg-yellow-500 rounded-lg px-3 py-2'><a href={aryaCV} download="">Download CV</a></button>
+                    <button className='text-1xl md:text-xl bg-yellow-500 rounded-lg px-3 py-2'><a href="#contact">Contact</a></button>
                 </div>
 
             </div>
 
-            <div className='w-full flex justify-center md:justify-start'>
+            <div className='w-[80%] flex justify-center md:justify-start overflow-hidden z-9'>
                 <svg className='w-[80%]' viewBox="0 0 1373 1373" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="1373" height="1373" fill="#F5F5F5" />
                     <g id="Frame 1">
@@ -462,8 +461,21 @@ export default function Banner() {
                         </g>
                     </g>
                 </svg>
-
             </div>
+
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[90%] left-[10%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[100%] left-[39%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[85%] left-[66%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[55%] left-[92%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[93%] left-[15%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[40%] left-[20%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[10%] left-[30%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[50%] left-[40%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[60%] left-[50%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[90%] left-[60%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[30%] left-[45%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[16%] left-[77%]'></div>
+            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[450%] left-[13%]'></div>
 
         </div>
     )

@@ -55,7 +55,7 @@ export default function Projects() {
   }]
 
   return (
-    <div id='project' className='p-2'>
+    <div id='project' className='mb-[100vh] shadow-lg'>
 
       <motion.div
         initial={{ opacity: 0, y: -100 }}

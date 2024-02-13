@@ -29,21 +29,17 @@ export default function Contact() {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      id='contact' className={`${mode} w-full h-[100vh] p-5`}>
+    <div id='contact' className={`${mode} w-full h-[100vh] fixed top-0 left-0 z-[-1]`}>
 
       <div id='head' className={`w-full text-5xl text-center h-[70px] flex justify-center items-center uppercase`}>Contact</div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 place-items-center h-[calc(100vh-70px)] w-full'>
+      <div className='grid grid-cols-1 md:grid-cols-2 place-items-center h-[calc(100vh-70px)] w-full p-5'>
 
         <div className='w-full h-full flex justify-center items-cente md:pl-[20%]'>
 
           <div className='flex flex-col gap-2'>
 
-            <img className='w-full md:w-[90%] p-10' src={email} alt="" />
+            <img className='w-full md:w-[80%] p-10' src={email} alt="" />
 
             <p className='hidden md:flex'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nulla. Repellat id, atque suscipit culpa incidunt rerum commodi nulla architecto!</p>
 
@@ -82,6 +78,6 @@ export default function Contact() {
       </div>
 
 
-    </motion.div>
+    </div>
   )
 }

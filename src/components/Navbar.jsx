@@ -21,15 +21,15 @@ export default function Navbar() {
             let t1 = gsap.timeline()
                 .from("#links", {
                     opacity: 0,
-                    duration: .5,
+                    duration: 1,
                     y: -100,
                 },"a")
                 .from("#port", {
-                    duration: .5,
+                    duration: 1,
                     x: -200,
                 },"a")
                 .from("#right", {
-                    duration: .5,
+                    duration: 1,
                     x: 100,
                 },"a")
 
@@ -62,10 +62,10 @@ export default function Navbar() {
             </p>
 
             {show && <ul className='w-full flex flex-col gap-5 p-2 bg-yellow-300 items-center justify-center fixed top-[70px] left-0'>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#skill">Skills</a></li>
+                <li><a onClick={()=>setShow(false)} href="#about">About</a></li>
+                <li><a onClick={()=>setShow(false)} href="#contact">Contact</a></li>
+                <li><a onClick={()=>setShow(false)} href="#project">Project</a></li>
+                <li><a onClick={()=>setShow(false)} href="#skill">Skills</a></li>
             </ul>}
 
         </div>

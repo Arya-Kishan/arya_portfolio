@@ -38,7 +38,7 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true}}
               transition={{ duration: 0.4 }}
-              className='flex flex-col items-center justify-center gap-2 w-[40vw] md:w-[300px] h-[100px] md:h-[200px] bg-yellow-400' key={i}>
+              className='flex flex-col items-center justify-center gap-2 w-[40vw] md:w-[300px] h-[100px] md:h-[200px] bg-yellow-400 hover:bg-yellow-300' key={i}>
               <img className='w-6 md:w-12' src={e.pic} alt="" srcSet="" />
               <p className='text-1xl md:text-2xl'>{e.text}</p>
             </motion.div>

@@ -11,6 +11,14 @@ export default function About() {
 
   const mode = useSelector(selectMode)
   const [data, setData] = useState(true)
+  console.log(window.innerWidth);
+  function intro() {
+    if (window.innerWidth >= 768) {
+      return "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things."
+    } else {
+      return "I am a motivated and versatile individual, always eager to take on new challenges. I am ready to make a meaningful contribution and achieve great things."
+    }
+  }
 
   let education = [{
     pic: lpu,
@@ -40,26 +48,32 @@ export default function About() {
   return (
     <div id='about' className={`${mode} w-full min-h-[100vh] p-2 flex flex-col gap-5`}>
 
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        className='h=[20vh] flex flex-col gap-4'>
+      <div className='h=[20vh] flex flex-col gap-4'>
         <div id='head' className={`w-full text-5xl text-center uppercase`}>About</div>
         <div className={`w-full text-xl text-center`}>--WHO I AM--</div>
-      </motion.div>
+      </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 min-h-[80vh] place-items-center'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2 min-h-[80vh] place-items-center'>
 
         {/* IMAGE */}
-        <img className='w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full p-2 border-2 border-solid border-white-700' src={coding} alt="" srcSet="" />
+        <motion.img
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{duration:1}}
+          className='w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full p-2 border-2 border-solid border-white-700' src={coding} alt="" srcSet="" />
 
         {/* DETAIL */}
-        <div className='w-full md:col-span-2 flex flex-col gap-5'>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{duration:1}}
+          className='w-full md:col-span-2 flex flex-col gap-5'>
 
           {/* AUTO DETAILS */}
           <p className='text-1xl md:text-3xl text-center md:text-left'>
-            I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.
+            {intro()}
           </p>
 
           {/* BUTTONS EDUCATION AND EXPERINCE */}
@@ -92,7 +106,7 @@ export default function About() {
             ))}
           </div>}
 
-        </div>
+        </motion.div>
 
       </div>
 
