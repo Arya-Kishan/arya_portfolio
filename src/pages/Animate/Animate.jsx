@@ -8,15 +8,12 @@ import Gmail from '../../assets/gmail.png'
 import aryaCV from "../../assets/aryaCV.pdf"
 import Navbar from '../../components/Navbar'
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { selectMode } from '../../Redux/ModeSlice'
 
 export default function Animate() {
 
   const parentRef = useRef()
   let [count, setCount] = useState(0)
   let navigate = useNavigate()
-  const mode = useSelector(selectMode)
 
   function handleNavigate() {
     // navigate("/home")
@@ -110,7 +107,7 @@ export default function Animate() {
   }, [])
 
   return (
-    <div ref={parentRef} className={`${mode} w-full h-[100vh] relative overflow-hidden bg-yellow-400`}>
+    <div ref={parentRef} className='w-full h-[100vh] relative overflow-hidden bg-yellow-400'>
 
       <div className='nav w-full absolute top-[-10%] left-0 z-11'>
         <Navbar />
@@ -118,19 +115,19 @@ export default function Animate() {
 
       <div className='blackScreen w-full h-[100vh] absolute top-0 left-0 bg-black flex items-center justify-center z-10'>
         <div className='flex gap-2'>
-          <div className='count text-3xl text-white'>
+          <div className='count text-1xl md:text-3xl text-white'>
             {count}
           </div>
           <div className='textDiv flex'>
-            <p className='textP text-white text-8xl font-bold'>P</p>
-            <p className='textP text-white text-8xl font-bold'>o</p>
-            <p className='textP text-white text-8xl font-bold'>r</p>
-            <p className='textP text-white text-8xl font-bold'>t</p>
-            <p className='textP text-white text-8xl font-bold'>f</p>
-            <p className='textP text-white text-8xl font-bold'>o</p>
-            <p className='textP text-white text-8xl font-bold'>l</p>
-            <p className='textP text-white text-8xl font-bold'>i</p>
-            <p className='textP text-white text-8xl font-bold'>o</p>
+            <p className='textP text-white text-4xl md:text-8xl font-bold'>P</p>
+            <p className='textP text-white text-4xl md:text-8xl font-bold'>o</p>
+            <p className='textP text-white text-4xl md:text-8xl font-bold'>r</p>
+            <p className='textP text-white text-4xl md:text-8xl font-bold'>t</p>
+            <p className='textP text-white text-4xl md:text-8xl font-bold'>f</p>
+            <p className='textP text-white text-4xl md:text-8xl font-bold'>o</p>
+            <p className='textP text-white text-4xl md:text-8xl font-bold'>l</p>
+            <p className='textP text-white text-4xl md:text-8xl font-bold'>i</p>
+            <p className='textP text-white text-4xl md:text-8xl font-bold'>o</p>
           </div>
         </div>
       </div>
