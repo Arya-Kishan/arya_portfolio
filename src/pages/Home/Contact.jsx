@@ -1,13 +1,13 @@
 import React, { useLayoutEffect, useRef } from 'react'
-import { selectMode } from '../Redux/ModeSlice'
+import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
 import { useForm } from 'react-hook-form'
-import email from '../assets/email.svg'
-import linkedIn from '../assets/linkedin.png'
-import Twitter from '../assets/twitter.png'
-import Github from '../assets/github.png'
-import Gmail from '../assets/gmail.png'
-import whatsapp from '../assets/whatsapp.png'
+import email from '../../assets/email.svg'
+import linkedIn from '../../assets/linkedin.png'
+import Twitter from '../../assets/twitter.png'
+import Github from '../../assets/github.png'
+import Gmail from '../../assets/gmail.png'
+import whatsapp from '../../assets/whatsapp.png'
 import { motion } from 'framer-motion'
 
 export default function Contact() {
@@ -29,13 +29,23 @@ export default function Contact() {
   }
 
   return (
-    <div id='contact' className={`${mode} w-full h-[100vh] fixed top-0 left-0 z-[-1]`}>
+    <div id='contact' className={`${mode} w-full h-[100vh]`}>
 
-      <div id='head' className={`w-full text-5xl text-center h-[70px] flex justify-center items-center uppercase`}>Contact</div>
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 1 }}
+        id='head' className={`w-full text-5xl text-center h-[70px] flex justify-center items-center uppercase`}>Contact</motion.div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 place-items-center h-[calc(100vh-70px)] w-full p-5'>
 
-        <div className='w-full h-full flex justify-center items-cente md:pl-[20%]'>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1 }}
+          className='w-full h-full flex justify-center items-cente md:pl-[20%]'>
 
           <div className='flex flex-col gap-2'>
 
@@ -61,9 +71,14 @@ export default function Contact() {
 
           </div>
 
-        </div>
+        </motion.div>
 
-        <form className='w-full flex flex-col gap-10 items-center justify-center' onSubmit={handleSubmit(handleForm)}>
+        <motion.form
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 1 }}
+          className='w-full flex flex-col gap-10 items-center justify-center' onSubmit={handleSubmit(handleForm)}>
 
           <input className='border-2 border-solid border-black w-[80%] p-2 text-yellow-400 rounded-lg' type="text" {...register("name")} placeholder='Your Name' id='name' name='name' />
 
@@ -73,7 +88,7 @@ export default function Contact() {
 
           <input className='w-[20%] bg-yellow-400 p-2 rounded-lg cursor-pointer' type="submit" />
 
-        </form>
+        </motion.form>
 
       </div>
 

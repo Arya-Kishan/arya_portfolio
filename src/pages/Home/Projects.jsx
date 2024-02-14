@@ -1,12 +1,12 @@
 import React, { useLayoutEffect, useRef } from 'react'
-import { selectMode } from '../Redux/ModeSlice'
+import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
-import Card from '../components/Card'
-import trailify from "../assets/trailify.png"
-import aryazon from "../assets/aryazon.png"
-import quiz from "../assets/quiz.png"
-import tic from "../assets/tic.png"
-import pika from "../assets/pika.png"
+import Card from '../../components/Card'
+import trailify from "../../assets/trailify.png"
+import aryazon from "../../assets/aryazon.png"
+import quiz from "../../assets/quiz.png"
+import tic from "../../assets/tic.png"
+import pika from "../../assets/pika.png"
 import { motion } from 'framer-motion'
 
 export default function Projects() {
@@ -55,7 +55,7 @@ export default function Projects() {
   }]
 
   return (
-    <div id='project' className='mb-[100vh] shadow-lg'>
+    <div id='project'>
 
       <motion.div
         initial={{ opacity: 0, y: -100 }}

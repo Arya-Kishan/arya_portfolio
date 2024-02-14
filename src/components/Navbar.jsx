@@ -40,7 +40,7 @@ export default function Navbar() {
     }, [])
 
     return (
-        <div ref={parentRef} className={`${mode} w-full h-[70px] flex justify-between px-5 border-solid border-b-2 shadow-lg sticky top-0 left-0 z-10`}>
+        <nav ref={parentRef} className={`${mode} w-full h-[70px] flex justify-between px-5 border-solid border-b-2 shadow-lg sticky top-0 left-0 z-10`}>
 
             <div id='port' className='flex justify-center items-center text-3xl font-bold'>
                 Portfolio
@@ -66,8 +66,12 @@ export default function Navbar() {
                 <li><a onClick={()=>setShow(false)} href="#contact">Contact</a></li>
                 <li><a onClick={()=>setShow(false)} href="#project">Project</a></li>
                 <li><a onClick={()=>setShow(false)} href="#skill">Skills</a></li>
+                <li><a onClick={()=>{
+                    setShow(false)
+                    navigator.share({title:"Arya Portfolio",url:window.location.href})
+                }} href="">Share</a></li>
             </ul>}
 
-        </div>
+        </nav>
     )
 }

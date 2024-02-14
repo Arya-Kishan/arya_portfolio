@@ -1,10 +1,10 @@
 import React, { useLayoutEffect, useRef, useState } from 'react'
-import { selectMode } from '../Redux/ModeSlice'
+import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
-import coding from '../assets/coding.svg'
-import lpu from '../assets/lpu.png'
-import presidency from '../assets/presidency.png'
-import sunbeam from '../assets/sunbeam.png'
+import coding from '../../assets/coding.svg'
+import lpu from '../../assets/lpu.png'
+import presidency from '../../assets/presidency.png'
+import sunbeam from '../../assets/sunbeam.png'
 import { motion } from 'framer-motion'
 
 export default function About() {
@@ -59,7 +59,7 @@ export default function About() {
         <motion.img
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0 }}
           transition={{duration:1}}
           className='w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full p-2 border-2 border-solid border-white-700' src={coding} alt="" srcSet="" />
 
@@ -67,7 +67,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0 }}
           transition={{duration:1}}
           className='w-full md:col-span-2 flex flex-col gap-5'>
 

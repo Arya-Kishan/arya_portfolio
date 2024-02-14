@@ -1,12 +1,12 @@
-import React, { useLayoutEffect, useReducer, useRef } from 'react'
-import '../App.scss'
-import linkedIn from '../assets/linkedin.png'
-import Twitter from '../assets/twitter.png'
-import Github from '../assets/github.png'
-import Gmail from '../assets/gmail.png'
-import { selectMode } from '../Redux/ModeSlice'
+import React, { useLayoutEffect, useRef } from 'react'
+import '../../App.scss'
+import linkedIn from '../../assets/linkedin.png'
+import Twitter from '../../assets/twitter.png'
+import Github from '../../assets/github.png'
+import Gmail from '../../assets/gmail.png'
+import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
-import aryaCV from "../assets/aryaCV.pdf"
+import aryaCV from "../../assets/aryaCV.pdf"
 import gsap from 'gsap'
 
 export default function Banner() {
@@ -22,7 +22,7 @@ export default function Banner() {
                 .from("#name1,#name2,#name3", {
                     opacity: 0,
                     duration: 1,
-                    y: "100%",
+                    y: "150%",
                 }, "a")
                 .from("#icon", {
                     opacity: 0,
@@ -32,7 +32,7 @@ export default function Banner() {
                 .from("svg", {
                     opacity: 0,
                     duration: 1,
-                    scale:0,
+                    scale: 0,
                 }, "a")
                 .from("button", {
                     duration: 1,
@@ -463,19 +463,25 @@ export default function Banner() {
                 </svg>
             </div>
 
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[90%] left-[10%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[100%] left-[39%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[85%] left-[66%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[55%] left-[92%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[93%] left-[15%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[40%] left-[20%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[10%] left-[30%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[50%] left-[40%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[60%] left-[50%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[90%] left-[60%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[30%] left-[45%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[16%] left-[77%]'></div>
-            <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[450%] left-[13%]'></div>
+            {/* ANIMATED CUBES */}
+            <div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[90%] left-[10%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[100%] left-[39%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[85%] left-[66%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[55%] left-[92%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[93%] left-[15%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[40%] left-[20%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[10%] left-[30%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[50%] left-[40%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[60%] left-[50%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[90%] left-[60%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[30%] left-[45%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[16%] left-[77%]'></div>
+                <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[450%] left-[13%]'></div>
+            </div>
+
+            {/* ANIMATING MARQUEE */}
+            
 
         </div>
     )

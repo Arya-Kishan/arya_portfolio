@@ -1,17 +1,17 @@
 import React, { useLayoutEffect, useRef } from 'react'
-import '../App.scss'
-import { selectMode } from '../Redux/ModeSlice'
+import '../../App.scss'
+import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
-import react from '../assets/react.png'
-import redux from '../assets/redux.png'
-import query from '../assets/query.png'
-import express from '../assets/express.png'
-import mui from '../assets/mui.png'
-import javascript from '../assets/javascript.png'
-import firebase from '../assets/firebase.png'
-import node from '../assets/node.png'
-import tailwind from '../assets/tailwind.png'
-import mongo from '../assets/mongo.png'
+import react from '../../assets/react.png'
+import redux from '../../assets/redux.png'
+import query from '../../assets/query.png'
+import express from '../../assets/express.png'
+import mui from '../../assets/mui.png'
+import javascript from '../../assets/javascript.png'
+import firebase from '../../assets/firebase.png'
+import node from '../../assets/node.png'
+import tailwind from '../../assets/tailwind.png'
+import mongo from '../../assets/mongo.png'
 import { motion } from 'framer-motion'
 
 export default function Skills() {
@@ -36,12 +36,23 @@ export default function Skills() {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true}}
+              viewport={{ once: true }}
               transition={{ duration: 0.4 }}
-              className='flex flex-col items-center justify-center gap-2 w-[40vw] md:w-[300px] h-[100px] md:h-[200px] bg-yellow-400 hover:bg-yellow-300' key={i}>
-              <img className='w-6 md:w-12' src={e.pic} alt="" srcSet="" />
-              <p className='text-1xl md:text-2xl'>{e.text}</p>
+              className='relative skillsCubeMain'
+              key={i}>
+
+              <div className='flex flex-col items-center justify-center gap-2 w-[40vw] md:w-[300px] h-[100px] md:h-[200px] bg-yellow-400'>
+                <img className='w-6 md:w-12' src={e.pic} alt="" srcSet="" />
+                <p className='text-1xl md:text-2xl'>{e.text}</p>
+              </div>
+
+              <div className='skillsCube absolute top-0 left-0 w-[40vw] md:w-[300px] h-[100px] md:h-[200px] bg-teal-400 flex flex-col items-center justify-center gap-2'>
+                <img className='w-6 md:w-12' src={e.pic} alt="" srcSet="" />
+                <p className='text-1xl md:text-2xl'>{e.text}</p>
+              </div>
+
             </motion.div>
+
           ))}
         </div>
 

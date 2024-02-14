@@ -95,3 +95,13 @@
         opacity: 0;
     }
 }
+
+.skillsCube{
+    background-color: red;
+    clip-path: circle(10% at 100% 0%);
+    transition: clip-path 1s ease-in-out;
+}
+
+.skillsCubeMain:hover .skillsCube{
+    clip-path: circle(75%);
+}

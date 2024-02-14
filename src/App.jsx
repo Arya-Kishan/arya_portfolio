@@ -1,23 +1,20 @@
 import { useState } from 'react'
 import './App.scss'
-import Navbar from './components/Navbar'
-import Banner from './pages/Banner'
-import Contact from './pages/Contact'
-import Skills from './pages/Skills'
-import Projects from './pages/Projects'
-import About from './pages/About'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import Animate from './pages/Animate/Animate'
+import Home from './pages/Home/Home'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Navbar />
-      <Banner />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+    <BrowserRouter>
+    <Routes>
+      <Route path='/home' element={<Animate/>} />
+      <Route path='/' element={<Home/>} />
+    </Routes>
+    </BrowserRouter>
     </>
   )
 }
