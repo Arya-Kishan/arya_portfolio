@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
 import Card from '../../components/Card'
@@ -12,6 +12,7 @@ import { motion } from 'framer-motion'
 export default function Projects() {
 
   const mode = useSelector(selectMode)
+  const ref = useRef()
   let project = [{
     name: "Aryazon",
     pic: aryazon,
@@ -54,8 +55,19 @@ export default function Projects() {
     git: "https://github.com/Arya-Kishan/tic-tac-toe"
   }]
 
+  useEffect(() => {
+    let observer = new IntersectionObserver((obj) => {
+      console.log(obj[0].isIntersecting);
+      if (obj[0].isIntersecting) {
+        console.log("arya");
+        document.body.style.overflow = "auto"
+      }
+    })
+    observer.observe(ref.current)
+  }, [])
+
   return (
-    <div id='project'>
+    <div id='project' ref={ref}>
 
       <motion.div
         initial={{ opacity: 0, y: -100 }}

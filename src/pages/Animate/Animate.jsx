@@ -7,16 +7,16 @@ import Github from '../../assets/github.png'
 import Gmail from '../../assets/gmail.png'
 import aryaCV from "../../assets/aryaCV.pdf"
 import Navbar from '../../components/Navbar'
-import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { selectMode } from '../../Redux/ModeSlice'
 
 export default function Animate() {
 
   const parentRef = useRef()
   let [count, setCount] = useState(0)
-  let navigate = useNavigate()
+  const mode = useSelector(selectMode)
 
   function handleNavigate() {
-    // navigate("/home")
     document.body.style.overflow = "auto"
   }
 
@@ -43,7 +43,6 @@ export default function Animate() {
       if (count < 101) {
         setCount(count++)
       } else {
-        console.log("reached to 100");
         clearInterval(intervaliD);
         shortOut();
       }
@@ -132,7 +131,7 @@ export default function Animate() {
         </div>
       </div>
 
-      <div className='whitePageDown w-full h-[100vh] absolute top-full left-0 bg-white z-8 grid grid-cols-1 md:grid-cols-2 place-items-center p-2 overflow-hidden'>
+      <div className={`${mode} whitePageDown w-full h-[100vh] absolute top-full left-0 z-8 grid grid-cols-1 md:grid-cols-2 place-items-center p-2 overflow-hidden`}>
 
         <div className='leftContent opacity-0 w-full h-fullbg-red-200 flex flex-col items-center justify-center gap-8 z-9'>
 
@@ -165,7 +164,7 @@ export default function Animate() {
           <svg className='w-[80%]' viewBox="0 0 1373 1373" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="1373" height="1373" fill="#F5F5F5" />
             <g id="Frame 1">
-              <rect width="3738" height="1881" transform="translate(-2120 -387)" fill="white" />
+              <rect width="3738" height="1881" transform="translate(-2120 -387)" fill={mode == "dark" ? "black" : "white"} />
               <g id="banner1">
                 <g id="freepik--Floor--inject-28">
                   <path id="Vector" d="M1298.47 1222.22C1298.47 1222.6 1024.48 1222.93 686.527 1222.93C348.577 1222.93 74.5264 1222.6 74.5264 1222.22C74.5264 1221.83 348.467 1221.5 686.527 1221.5C1024.59 1221.5 1298.47 1221.81 1298.47 1222.22Z" fill="#263238" />
