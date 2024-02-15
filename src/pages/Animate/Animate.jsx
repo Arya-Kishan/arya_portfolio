@@ -66,6 +66,9 @@ export default function Animate() {
           y: -100,
           duration: 2,
         }, "a")
+        .to("#range", {
+          opacity: 0,
+        }, "a")
         .to(".whitePageDown", {
           duration: 2,
           y: "-80vh",
@@ -112,7 +115,7 @@ export default function Animate() {
         <Navbar />
       </div>
 
-      <div className='blackScreen w-full h-[100vh] absolute top-0 left-0 bg-black flex items-center justify-center z-10'>
+      <div className='blackScreen w-full h-[100vh] absolute top-0 left-0 bg-black flex flex-col items-center justify-center z-10 gap-3 md:gap-10'>
         <div className='flex gap-2'>
           <div className='count text-1xl md:text-3xl text-white'>
             {count}
@@ -129,6 +132,11 @@ export default function Animate() {
             <p className='textP text-white text-4xl md:text-8xl font-bold'>o</p>
           </div>
         </div>
+
+        <div id='range' className='w-[200px] md:w-[400px] h-[10px] bg-white flex items-center justify-start rounded-lg p-1'>
+          <div style={{ width: `${count}%` }} className={`h-[5px] bg-black rounded-lg`}></div>
+        </div>
+
       </div>
 
       <div className={`${mode} whitePageDown w-full h-[100vh] absolute top-full left-0 z-8 grid grid-cols-1 md:grid-cols-2 place-items-center p-2 overflow-hidden`}>
@@ -161,7 +169,7 @@ export default function Animate() {
         </div>
 
         <div className='rightContent opacity-0 w-[80%] flex justify-center md:justify-start overflow-hidden z-9'>
-          <svg className='w-[80%]' viewBox="0 0 1373 1373" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className='w-[90%] md:w-[80%]' viewBox="0 0 1373 1373" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="1373" height="1373" fill="#F5F5F5" />
             <g id="Frame 1">
               <rect width="3738" height="1881" transform="translate(-2120 -387)" fill={mode == "dark" ? "black" : "white"} />

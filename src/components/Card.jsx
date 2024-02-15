@@ -75,8 +75,8 @@ export default function Card({ card }) {
                 <p className='text-gray-500'>{card.desc}</p>
 
                 <div className='w-full flex justify-evenly items-center'>
-                    <a href={card.live} onClick={handleGo} className='text-1xl text-center font-bold w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden'>Live <img id='go' className='w-6' src={go} alt="" srcSet="" /></a>
-                    <a href={card.git} onClick={handleGit} className='text-1xl text-center w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden'>Github<img id='git' className='w-6' src={git} alt="" srcSet="" /></a>
+                    <a href={card.live} onClick={handleGo} className='text-1xl text-center font-bold w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-teal-400'>Live <img id='go' className='w-6' src={go} alt="" srcSet="" /></a>
+                    <a href={card.git} onClick={handleGit} className='text-1xl text-center w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-teal-400'>Github<img id='git' className='w-6' src={git} alt="" srcSet="" /></a>
                 </div>
 
             </div>

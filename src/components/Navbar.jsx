@@ -57,7 +57,7 @@ export default function Navbar() {
 
                 <button onClick={e => dispatch(changeMode())}>       {mode == "dark" ? <img className="w-8" src={moon} alt="" srcSet="" /> : <img className="w-8" src={sun} alt="" srcSet="" />}</button>
 
-                {!show ? <img onClick={e => setShow(true)} className='w-6' src={menu} alt="" srcSet="" /> : <img onClick={e => setShow(false)} className='w-6' src={cross} alt="" srcSet="" />}
+                {!show ? <img onClick={e => setShow(true)} className='w-6 md:hidden' src={menu} alt="" srcSet="" /> : <img onClick={e => setShow(false)} className='w-6' src={cross} alt="" srcSet="" />}
 
             </p>
 
