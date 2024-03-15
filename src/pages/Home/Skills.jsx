@@ -12,22 +12,20 @@ import firebase from '../../assets/firebase.png'
 import node from '../../assets/node.png'
 import tailwind from '../../assets/tailwind.png'
 import mongo from '../../assets/mongo.png'
+import sass from '../../assets/sass.png'
+import ts from '../../assets/ts.png'
 import { motion } from 'framer-motion'
 
 export default function Skills() {
 
   const mode = useSelector(selectMode)
-  let skillsArr = [{ pic: react, text: 'React' }, { pic: redux, text: 'Redux' }, { pic: query, text: 'React Query' }, { pic: mongo, text: 'Mongo' }, { pic: express, text: 'Express' }, { pic: mui, text: 'Material UI' }, { pic: javascript, text: 'Javascript' }, { pic: firebase, text: 'Firebase' }, { pic: node, text: 'Node JS' }, { pic: tailwind, text: 'Tailwind CSS' }];
+  let skillsArr = [{ pic: react, text: 'React' }, { pic: redux, text: 'Redux' }, { pic: ts, text: 'Typescript' }, { pic: query, text: 'React Query' }, { pic: mongo, text: 'Mongo' }, { pic: express, text: 'Express' }, { pic: mui, text: 'Material UI' }, { pic: javascript, text: 'Javascript' }, { pic: firebase, text: 'Firebase' }, { pic: node, text: 'Node JS' }, { pic: tailwind, text: 'Tailwind CSS' }, { pic: sass, text: 'Sass' }];
 
 
   return (
     <div id='skill'>
 
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
-        id='head' className={`${mode} w-full text-5xl text-center uppercase`}>Skills</motion.div>
+      <div className={`${mode} w-full text-5xl text-center uppercase`}><span className='text-yellow-600'>Technical</span> Skills</div>
 
       <div className={`${mode} w-full p-5 md:p-10`}>
 
