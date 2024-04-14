@@ -9,9 +9,10 @@ import tic from "../../assets/tic.png"
 import news from "../../assets/news.png"
 import pika from "../../assets/pika.png"
 import hangman from "../../assets/hangman.png"
+import weather from "../../assets/weather.png"
 import trailflix from "../../assets/trailflix.jpg"
 import translate from "../../assets/translate.png"
-import { motion } from 'framer-motion'
+import hirehub from "../../assets/hirehub.png"
 
 export default function Projects() {
 
@@ -20,11 +21,20 @@ export default function Projects() {
   const [projects, setProjects] = useState()
 
   let project = [{
+    name: "Hirehub",
+    pic: hirehub,
+    stack: ["MERN", "Nodemailer", "Cloudinary"],
+    date: "Mar 24 - April 20",
+    desc: "This project is about building a combination of job portal and social media web application including all basic features of job and social apps with jwt,responsive,PRO features,Razorpay etc..",
+    live: "https://arya-hirehub.netlify.app",
+    git: "https://github.com/Arya-Kishan/hirehub-frontend",
+    category: "mern"
+  },{
     name: "Aryazon",
     pic: aryazon,
     stack: ["MERN", "Nodemailer", "Cloudinary"],
     date: "Mar 23 - April 20",
-    desc: "A full stack MERN Ecommerce app with an Admin panel.A User can search particular product and check the details of product add to cart and place an order ...",
+    desc: "This project is about building an online E-commerce web application with Admin Panel showing the functionalities of an e-commerce website like filtering the products, payment integration, add to cart, wishlist etc",
     live: "https://heroic-twilight-9e84af.netlify.app/",
     git: "https://github.com/Arya-Kishan/MERN-ECOMMERCE-FRONTEND",
     category: "mern"
@@ -51,9 +61,18 @@ export default function Projects() {
     pic: pika,
     stack: ["react", "gsap"],
     date: "Dec 08 - Dec 12",
-    desc: "A animated pokemon app to check the details of particular pokemon with various animation",
+    desc: "A animated pokemon app like pokedox to check the details of any pokemon and search their ability and characteristics ",
     live: "https://arya-gsap-pokemon.netlify.app/",
     git: "https://github.com/Arya-Kishan/GSAP-POKEMON",
+    category: "react"
+  }, {
+    name: "Weather",
+    pic: weather,
+    stack: ["react", "Speech Api"],
+    date: "Dec 22 - Dec 30",
+    desc: "It's a web app to show the weather forecast details using weather API & you will be able to search for all the weather details for any city in the world & it also detects your current location show the weather data.",
+    live: "https://arya-react-trailify.netlify.app/",
+    git: "https://github.com/Arya-Kishan/React-Trailify",
     category: "react"
   }, {
     name: "Quiz",
@@ -145,14 +164,14 @@ export default function Projects() {
 
       <div className={`${mode} w-full text-5xl text-center uppercase`}>My <span className='text-yellow-600'>Creative</span> Section</div>
 
-      <div className='w-[80%] md:w-[50%] flex justify-evenly px-10 py-6 gap-2'>
-        <p onClick={() => changeCategory("All")} className='bg-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-gray-400'>All</p>
-        <p onClick={() => changeCategory("React")} className='bg-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-gray-400'>React</p>
-        <p onClick={() => changeCategory("Javascript")} className='bg-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-gray-400'>Javascript</p>
-        <p onClick={() => changeCategory("Mern")} className='bg-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-gray-400'>MERN</p>
+      <div className={`w-[100%] md:w-[100%] flex justify-evenly md:px-60 py-6 gap-2 ${mode} text-[14px] md:text-xl`}>
+        <p onClick={() => changeCategory("All")} className='border-2 border-yellow-500 md:border-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400'>All</p>
+        <p onClick={() => changeCategory("React")} className='border-2 border-yellow-500 md:border-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400'>React</p>
+        <p onClick={() => changeCategory("Javascript")} className='border-2 border-yellow-500 md:border-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400'>Javascript</p>
+        <p onClick={() => changeCategory("Mern")} className='border-2 border-yellow-500 md:border-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400'>MERN</p>
       </div>
 
-      <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-start p-10`}>
+      <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-center md:justify-start p-10`}>
         {projects?.map((e, i) => <Card key={i} card={e} />)}
       </div>
 

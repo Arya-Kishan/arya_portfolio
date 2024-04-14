@@ -23,9 +23,9 @@ export default function Skills() {
 
 
   return (
-    <div id='skill'>
+    <div id='skill' className={`${mode} h-[100vh]`}>
 
-      <div className={`${mode} w-full text-5xl text-center uppercase`}><span className='text-yellow-600'>Technical</span> Skills</div>
+      <div className={`w-full text-5xl text-center uppercase`}><span className='text-yellow-600'>Technical</span> Skills</div>
 
       <div className={`${mode} w-full p-5 md:p-10`}>
 
@@ -39,12 +39,12 @@ export default function Skills() {
               className='relative skillsCubeMain'
               key={i}>
 
-              <div className='flex flex-col items-center justify-center gap-2 w-[40vw] md:w-[300px] h-[100px] md:h-[200px] bg-yellow-400'>
+              <div className='flex flex-col items-center justify-center gap-2 w-[40vw] md:w-[200px] h-[100px] md:h-[160px] bg-yellow-400 cursor-pointer'>
                 <img className='w-6 md:w-12' src={e.pic} alt="" srcSet="" />
                 <p className='text-1xl md:text-2xl'>{e.text}</p>
               </div>
 
-              <div className='skillsCube absolute top-0 left-0 w-[40vw] md:w-[300px] h-[100px] md:h-[200px] bg-teal-400 flex flex-col items-center justify-center gap-2'>
+              <div className='skillsCube absolute top-0 left-0 w-[40vw] md:w-[200px] h-[100px] md:h-[160px] bg-teal-400 flex flex-col items-center justify-center gap-2 cursor-pointer'>
                 <img className='w-6 md:w-12' src={e.pic} alt="" srcSet="" />
                 <p className='text-1xl md:text-2xl'>{e.text}</p>
               </div>

@@ -51,17 +51,17 @@ export default function Card({ card }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: .1 }}
             transition={{ duration: 0.4 }}
-            className='w-[300px] h-[470px] md:w-[400px] md:min-h-[500px] rounded-lg shadow-lg flex flex-col items-start justify-evenly cursor-pointer'
+            className='w-[300px] h-[470px] md:w-[400px] md:min-h-[500px] rounded-lg shadow-lg shadow-white flex flex-col items-start justify-evenly cursor-pointer p-2'
             ref={parentRef}>
 
-            <img src={card.pic} alt="" srcSet="" />
+            <img loading='lazy' src={card.pic} alt="" srcSet="" />
 
             <div className='w-full h-full flex flex-col items-start justify-between p-2'>
 
                 {/* TECH USED */}
                 <div className='flex gap-5'>
                     {card?.stack?.map((e, i) => (
-                        <p className='text-[14px] md:text-xl  bg-yellow-400 p-2 rounded-lg' key={i}>{e}</p>
+                        <p className='hidden md:flex text-[14px] md:text-xl  bg-yellow-400 p-2 rounded-lg' key={i}>{e}</p>
                     ))}
                 </div>
 
