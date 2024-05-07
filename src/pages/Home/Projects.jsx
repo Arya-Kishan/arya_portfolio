@@ -71,8 +71,8 @@ export default function Projects() {
     stack: ["react", "Speech Api"],
     date: "Dec 22 - Dec 30",
     desc: "It's a web app to show the weather forecast details using weather API & you will be able to search for all the weather details for any city in the world & it also detects your current location show the weather data.",
-    live: "https://arya-react-trailify.netlify.app/",
-    git: "https://github.com/Arya-Kishan/React-Trailify",
+    live: "https://arya-weather.netlify.app/",
+    git: "https://github.com/Arya-Kishan/PRODIGY_WD_05",
     category: "react"
   }, {
     name: "Quiz",
