@@ -19,6 +19,7 @@ export default function Projects() {
   const mode = useSelector(selectMode)
   const ref = useRef()
   const [projects, setProjects] = useState()
+  const [bg,setBg] = useState("Mern")
 
   let project = [{
     name: "Hirehub",
@@ -126,29 +127,35 @@ export default function Projects() {
     if (category == "All") {
 
       setProjects(project)
+      setBg("All")
 
     } else if (category == "React") {
 
       let categoryProjects = project.filter((e) => e.category == "react")
       console.log(categoryProjects);
       setProjects(categoryProjects)
+      setBg("React")
 
     } else if (category == "Javascript") {
 
       let categoryProjects = project.filter((e) => e.category == "javascript")
       setProjects(categoryProjects)
+      setBg("Javascript")
 
     } else {
 
       let categoryProjects = project.filter((e) => e.category == "mern")
       setProjects(categoryProjects)
+      setBg("Mern")
 
     }
 
   }
 
   useEffect(() => {
-    setProjects(project)
+
+    setProjects(project.filter((e) => e.category == "mern"))
+
     let observer = new IntersectionObserver((obj) => {
       console.log(obj[0].isIntersecting);
       if (obj[0].isIntersecting) {
@@ -157,6 +164,8 @@ export default function Projects() {
       }
     })
     observer.observe(ref.current)
+
+
   }, [])
 
   return (
@@ -165,13 +174,13 @@ export default function Projects() {
       <div className={`${mode} w-full text-5xl text-center uppercase`}>My <span className='text-yellow-600'>Creative</span> Section</div>
 
       <div className={`w-[100%] md:w-[100%] flex justify-evenly md:px-60 py-6 gap-2 ${mode} text-[14px] md:text-xl`}>
-        <p onClick={() => changeCategory("All")} className='border-2 border-yellow-500 md:border-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400'>All</p>
-        <p onClick={() => changeCategory("React")} className='border-2 border-yellow-500 md:border-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400'>React</p>
-        <p onClick={() => changeCategory("Javascript")} className='border-2 border-yellow-500 md:border-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400'>Javascript</p>
-        <p onClick={() => changeCategory("Mern")} className='border-2 border-yellow-500 md:border-white shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400'>MERN</p>
+        <p onClick={() => changeCategory("All")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400 ${bg == "All" ? "bg-yellow-600" : ""}`}>All</p>
+        <p onClick={() => changeCategory("React")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400 ${bg == "React" ? "bg-yellow-600" : ""}`}>React</p>
+        <p onClick={() => changeCategory("Javascript")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400 ${bg == "Javascript" ? "bg-yellow-600" : ""}`}>Javascript</p>
+        <p onClick={() => changeCategory("Mern")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400 ${bg == "Mern" ? "bg-yellow-600" : ""}`}>MERN</p>
       </div>
 
-      <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-center md:justify-start p-10`}>
+      <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-center md:justify-evenly p-10`}>
         {projects?.map((e, i) => <Card key={i} card={e} />)}
       </div>
 

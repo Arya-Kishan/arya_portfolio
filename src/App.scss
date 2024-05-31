@@ -69,13 +69,14 @@
 }
 
 .light {
-    background-color: white;
+    background-color: rgb(255, 255, 254);
     color: black;
     border-color: black;
 }
 
 .dark {
-    background-color: black;
+    // background-color: rgb(12, 12, 0);
+    background: linear-gradient(to right ,rgb(9, 9, 0),rgb(18, 18, 2),rgb(9, 9, 0));
     color: white;
     border-color: white;
 }
