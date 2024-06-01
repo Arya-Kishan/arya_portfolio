@@ -51,7 +51,7 @@ export default function Card({ card }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: .1 }}
             transition={{ duration: 0.4 }}
-            className='w-[300px] h-[470px] md:w-[400px] md:min-h-[500px] rounded-lg shadow-lg shadow-yellow-400 flex flex-col items-start justify-evenly cursor-pointer p-2'
+            className='w-[300px] h-[470px] md:w-[400px] md:min-h-[500px] rounded-lg shadow-lg shadow-black flex flex-col items-start justify-evenly cursor-pointer p-2'
             ref={parentRef}>
 
             <img loading='lazy' src={card.pic} alt="" srcSet="" />
@@ -66,7 +66,7 @@ export default function Card({ card }) {
                 </div> */}
 
                 {/* TITLE */}
-                <h1 className='text-xl md:text-3xl'>{card.name}</h1>
+                <h1 className='text-xl md:text-3xl font-semibold'>{card.name}</h1>
 
                 {/* DATE */}
                 <p>{card.date}</p>

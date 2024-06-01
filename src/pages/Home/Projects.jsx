@@ -169,15 +169,15 @@ export default function Projects() {
   }, [])
 
   return (
-    <div id='project' ref={ref} className='flex flex-col justify-center items-center'>
+    <div id='project' ref={ref} className='flex flex-col justify-center items-center overflow-hidden'>
 
       <div className={`${mode} w-full text-5xl text-center uppercase`}>My <span className='text-yellow-600'>Creative</span> Section</div>
 
-      <div className={`w-[100%] md:w-[100%] flex justify-evenly md:px-60 py-6 gap-2 ${mode} text-[14px] md:text-xl`}>
-        <p onClick={() => changeCategory("All")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400 ${bg == "All" ? "bg-yellow-600" : ""}`}>All</p>
-        <p onClick={() => changeCategory("React")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400 ${bg == "React" ? "bg-yellow-600" : ""}`}>React</p>
-        <p onClick={() => changeCategory("Javascript")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400 ${bg == "Javascript" ? "bg-yellow-600" : ""}`}>Javascript</p>
-        <p onClick={() => changeCategory("Mern")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-5 py-2 cursor-pointer hover:bg-yellow-400 ${bg == "Mern" ? "bg-yellow-600" : ""}`}>MERN</p>
+      <div className={`w-[100%] md:w-[100%] flex justify-evenly md:px-60 py-6 gap-2 ${mode} text-[12px] md:text-xl`}>
+        <p onClick={() => changeCategory("All")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == "All" ? "bg-yellow-600" : ""}`}>All</p>
+        <p onClick={() => changeCategory("React")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == "React" ? "bg-yellow-600" : ""}`}>React</p>
+        <p onClick={() => changeCategory("Javascript")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == "Javascript" ? "bg-yellow-600" : ""}`}>Javascript</p>
+        <p onClick={() => changeCategory("Mern")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == "Mern" ? "bg-yellow-600" : ""}`}>MERN</p>
       </div>
 
       <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-center md:justify-evenly p-10`}>
