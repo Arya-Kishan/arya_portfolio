@@ -8,7 +8,7 @@
 
 @keyframes head1 {
     from {
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
 
     to {
@@ -25,7 +25,7 @@
 
 @keyframes head2 {
     from {
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
 
     to {
@@ -52,7 +52,8 @@
 
 #leaf1,
 #leaf2,
-#leaf3 {
+#leaf3,
+#specs {
     animation: head4 3s ease-in infinite alternate;
     transform-box: fill-box;
     transform-origin: bottom;

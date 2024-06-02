@@ -7,6 +7,7 @@ import aryazon from "../../assets/aryazon.png"
 import quiz from "../../assets/quiz.png"
 import tic from "../../assets/tic.png"
 import news from "../../assets/news.png"
+import chatAppImg from "../../assets/chatAppImg.png"
 import pika from "../../assets/pika.png"
 import hangman from "../../assets/hangman.png"
 import weather from "../../assets/weather.png"
@@ -29,6 +30,15 @@ export default function Projects() {
     desc: "This project is about building a combination of job portal and social media web application including all basic features of job and social apps with jwt,responsive,PRO features,Razorpay etc..",
     live: "https://arya-hirehub.netlify.app",
     git: "https://github.com/Arya-Kishan/hirehub-frontend",
+    category: "mern"
+  },{
+    name: "Chat App",
+    pic: chatAppImg,
+    stack: ["MERN"],
+    date: "Mar 23 - April 20",
+    desc: "This project is about building an online Chat web application with showing the functionalities of chat app like connecting with friends, real time chat, create Group, show active time etc",
+    live: "https://arya-chat-mern.netlify.app/",
+    git: "https://github.com/Arya-Kishan/MERN_CHAT_CLIENT",
     category: "mern"
   },{
     name: "Aryazon",

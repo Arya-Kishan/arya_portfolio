@@ -29,7 +29,7 @@ export default function Contact() {
   }
 
   return (
-    <div id='contact' className={`${mode} w-full h-[100vh]`}>
+    <div id='contact' className={`${mode} w-full min-h-[120vh] md:min-h-[100vh]`}>
 
       <motion.div
         initial={{ opacity: 0, y: -100 }}
@@ -51,7 +51,7 @@ export default function Contact() {
 
             <img className='w-full md:w-[80%] p-10' src={email} alt="" />
 
-            <p className='hidden md:flex'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nulla. Repellat id, atque suscipit culpa incidunt rerum commodi nulla architecto!</p>
+            <p className='hidden md:flex'>Let's Connect !</p>
 
             <div className='hidden md:flex flex-col gap-4 justify-center items-start'>
 
@@ -59,14 +59,12 @@ export default function Contact() {
 
               <a className='flex gap-3' href="https://twitter.com/_arya_kishan_"><img className={`w-8 bg-${mode == "light" ? "white" : "yellow"}-500 p-1 rounded-lg cursor-pointer`} src={Twitter} alt="" srcSet="" />Twitter</a>
 
-              <a className='flex gap-3' href="https://github.com/Arya-Kishan"><img className={`w-8 bg-${mode == "light" ? "white" : "yellow"}-500 p-1 rounded-lg cursor-pointer`} src={Github} alt="" srcSet="" />Github</a>
-
               <a className='flex gap-3' href="mailto:arya12345kishan@gmail.com"><img className={`w-8 bg-${mode == "light" ? "white" : "yellow"}-500 p-1 rounded-lg cursor-pointer`} src={Gmail} alt="" srcSet="" />Gmail</a>
 
             </div>
 
-            <div className='hidden md:flex'>
-              <button onClick={handleTouch} className='bg-yellow-400 rounded-lg p-4'>Get in Touch</button>
+            <div className='hidden md:flex mt-1'>
+              <button onClick={handleTouch} className='bg-yellow-400 rounded-lg p-2'>Get in Touch</button>
             </div>
 
           </div>
@@ -96,3 +94,4 @@ export default function Contact() {
     </div>
   )
 }
+

@@ -81,7 +81,7 @@ export default function About() {
                 <div><img className='w-10' src={e.pic} alt="" srcSet="" /></div>
                 <div>
                   <h2 className='text-xl md:text-2xl'>{e.college}</h2>
-                  <p className='text-gray-600'>{e.year}</p>
+                  {/* <p className='text-gray-600'>{e.year}</p> */}
                   <p>{e.course}</p>
                 </div>
               </div>
