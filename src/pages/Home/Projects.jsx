@@ -14,6 +14,7 @@ import weather from "../../assets/weather.png"
 import trailflix from "../../assets/trailflix.jpg"
 import translate from "../../assets/translate.png"
 import hirehub from "../../assets/hirehub.png"
+import anime from "../../assets/animePic.png"
 
 export default function Projects() {
 
@@ -66,6 +67,15 @@ export default function Projects() {
     desc: "A Translator app where you can learn the different languages and attend quiz in the end, you can also translate words into list of  different languages etc... ",
     live: "https://arya-translator.netlify.app/",
     git: "https://github.com/Arya-Kishan/AryaLingo",
+    category: "react"
+  },{
+    name: "AnimeBook",
+    pic: anime,
+    stack: ["react", "tailwind"],
+    date: "Feb 25 - Mar 24",
+    desc: "A Anime app where you can explore the different anime's and manga's, check their details, character, character details, search anime and different categories etc... ",
+    live: "https://arya-animebook.netlify.app",
+    git: "https://github.com/Arya-Kishan/react_animebook",
     category: "react"
   }, {
     name: "Pokedox",
