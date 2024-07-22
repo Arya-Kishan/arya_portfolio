@@ -560,7 +560,7 @@ export default function Animate() {
       </div>
 
       {/* ANIMATED CUBES */}
-      {/* <div>
+      <div>
         <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[90%] left-[10%]'></div>
         <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[100%] left-[39%]'></div>
         <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[85%] left-[66%]'></div>
@@ -574,7 +574,7 @@ export default function Animate() {
         <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[30%] left-[45%]'></div>
         <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[16%] left-[77%]'></div>
         <div className='cube w-5 h-5 md:w-8 md:h-8 absolute top-[450%] left-[13%]'></div>
-      </div> */}
+      </div>
 
     </div>
   )

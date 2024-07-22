@@ -8,36 +8,53 @@ export default function Card({ card }) {
 
     const parentRef = useRef()
 
-    function handleGo() {
+    function handleGo(liveUrl) {
+        console.log(liveUrl);
 
         const ctx = gsap.context(() => {
 
             let t1 = gsap.timeline()
                 .to("#go", {
+                    scale: 0.4,
+                })
+                .to("#go", {
+                    scale: 1,
+                })
+                .to("#go", {
                     duration: 1,
                     y: "-120%",
                     x: 100,
+                    opacity:0.1,
+                })
+                .to("#go", {
+                    duration: 1,
+                    y: "0%",
+                    x: 0,
+                    opacity:1,
+                    onComplete: () => { window.open(liveUrl, "_blank") }
                 })
         }, [parentRef])
 
         return () => ctx.revert();
     }
 
-    function handleGit() {
+    function handleGit(gitHubUrl) {
+        console.log(gitHubUrl);
 
         const ctx = gsap.context(() => {
 
             let t1 = gsap.timeline()
                 .to("#git", {
-                    scale:1.1,
-                    rotate:20,
+                    scale: 1.1,
+                    rotate: 20,
                 })
                 .to("#git", {
-                    rotate:-20,
+                    rotate: -20,
                 })
                 .to("#git", {
-                    scale:1,
-                    rotate:0,
+                    scale: 1,
+                    rotate: 0,
+                    // onComplete: () => { window.open(gitHubUrl, "_blank") }
                 })
 
         }, [parentRef])
@@ -75,8 +92,11 @@ export default function Card({ card }) {
                 <p className='text-gray-500'>{card.desc}</p>
 
                 <div className='w-full flex justify-evenly items-center'>
-                    <a href={card.live} target="_blank" onClick={handleGo} className='text-1xl text-center font-bold w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-teal-400'>Live <img id='go' className='w-6' src={go} alt="" srcSet="" /></a>
-                    <a href={card.git} target="_blank" onClick={handleGit} className='text-1xl text-center w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-teal-400'>Github<img id='git' className='w-6' src={git} alt="" srcSet="" /></a>
+
+                    <div onClick={() => handleGo(card.live)} className='text-1xl text-center font-bold w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-teal-400'>Live <img id='go' className='w-6' src={go} alt="" srcSet="" /></div>
+
+                    <div onClick={() => handleGit(card.git)} className='text-1xl text-center w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-teal-400'>Github<img id='git' className='w-6' src={git} alt="" srcSet="" /></div>
+
                 </div>
 
             </div>
