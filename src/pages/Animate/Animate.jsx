@@ -113,41 +113,41 @@ export default function Animate() {
   }, [])
 
   return (
-    <div ref={parentRef} className='w-full h-[100vh] relative overflow-hidden bg-yellow-400'>
+    <div ref={parentRef} className='w-full h-[100vh] relative overflow-hidden bg-bgColor1'>
 
-      <div className='nav w-full absolute top-[-10%] left-0 z-11'>
+      <div className='nav w-full absolute top-[-10%] left-0 z-50'>
         <Navbar />
       </div>
 
-      <div className='blackScreen w-full h-[100vh] absolute top-0 left-0 bg-black flex flex-col items-center justify-center z-10 gap-3 md:gap-10'>
+      <div className='blackScreen w-full h-[100vh] absolute top-0 left-0 bg-bgColor2 flex flex-col items-center justify-center z-10 gap-3 md:gap-10'>
         <div className='flex gap-2'>
           <div className='count text-1xl md:text-3xl text-white'>
             {count}
           </div>
           <div className='textDiv flex'>
-            <p className='textP text-white text-4xl md:text-8xl font-bold'>P</p>
-            <p className='textP text-white text-4xl md:text-8xl font-bold'>o</p>
-            <p className='textP text-white text-4xl md:text-8xl font-bold'>r</p>
-            <p className='textP text-white text-4xl md:text-8xl font-bold'>t</p>
-            <p className='textP text-white text-4xl md:text-8xl font-bold'>f</p>
-            <p className='textP text-white text-4xl md:text-8xl font-bold'>o</p>
-            <p className='textP text-white text-4xl md:text-8xl font-bold'>l</p>
-            <p className='textP text-white text-4xl md:text-8xl font-bold'>i</p>
-            <p className='textP text-white text-4xl md:text-8xl font-bold'>o</p>
+            <p className='textP text-txtColor1 text-4xl md:text-8xl font-bold'>P</p>
+            <p className='textP text-txtColor1 text-4xl md:text-8xl font-bold'>o</p>
+            <p className='textP text-txtColor1 text-4xl md:text-8xl font-bold'>r</p>
+            <p className='textP text-txtColor1 text-4xl md:text-8xl font-bold'>t</p>
+            <p className='textP text-txtColor1 text-4xl md:text-8xl font-bold'>f</p>
+            <p className='textP text-txtColor1 text-4xl md:text-8xl font-bold'>o</p>
+            <p className='textP text-txtColor1 text-4xl md:text-8xl font-bold'>l</p>
+            <p className='textP text-txtColor1 text-4xl md:text-8xl font-bold'>i</p>
+            <p className='textP text-txtColor1 text-4xl md:text-8xl font-bold'>o</p>
           </div>
         </div>
 
-        <div id='range' className='w-[200px] md:w-[400px] h-[10px] bg-white flex items-center justify-start rounded-lg p-1'>
-          <div style={{ width: `${count}%` }} className={`h-[5px] bg-black rounded-lg`}></div>
+        <div id='range' className='w-[200px] md:w-[400px] h-[10px] bg-bgColor2 flex items-center justify-start rounded-lg p-1'>
+          <div style={{ width: `${count}%` }} className={`h-[5px] bg-yellow-500 rounded-lg`}></div>
         </div>
 
       </div>
 
       <div className={`${mode} whitePageDown w-full h-[100vh] absolute top-full left-0 z-8 grid grid-cols-1 lg:grid-cols-2 p-2 overflow-hidden`}>
 
-        <div className='leftContent opacity-0 w-full h-fullbg-red-200 flex flex-col items-center lg:items-start justify-end md:justify-end lg:justify-center gap-8 z-9 lg:pl-40 font-sans'>
+        <div className='leftContent opacity-0 w-full flex flex-col items-center lg:items-start justify-end md:justify-end lg:justify-center gap-8 z-9 lg:pl-40 font-sans'>
 
-          <div className='w-full h-fullbg-red-200 flex flex-col items-center lg:items-start justify-center gap-3'>
+          <div className='w-full flex flex-col items-center lg:items-start justify-center gap-3'>
             <div className='text-xl md:text-4xl lg:text-5xl overflow-hidden '><p id='name1' className='translate-y-20 pl-1'>Hii I'm</p></div>
             <div className='text-3xl md:text-5xl lg:text-7xl overflow-hidden'><p id='name2' className='translate-y-20'>Arya Kishan</p></div>
             <div className='text-xl md:text-4xl lg:text-5xl overflow-hidden'><p id='name3' className='translate-y-20'>React Developer</p></div>
@@ -166,8 +166,8 @@ export default function Animate() {
           </div>
 
           <div className='flex gap-10 overflow-hidden'>
-            <button className='text-1xl md:text-xl bg-yellow-500 rounded-lg px-3 py-2'><a href={aryaCV} download="">Download CV</a></button>
-            <button className='text-1xl md:text-xl bg-yellow-500 rounded-lg px-3 py-2'><a href="#contact">Contact</a></button>
+            <button className='text-1xl md:text-xl bg-btnColor1 rounded-lg px-3 py-2'><a href={aryaCV} download="">Download CV</a></button>
+            <button className='text-1xl md:text-xl bg-btnColor1 rounded-lg px-3 py-2'><a href="#contact">Contact</a></button>
           </div>
 
         </div>

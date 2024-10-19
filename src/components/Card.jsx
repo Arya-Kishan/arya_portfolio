@@ -24,14 +24,14 @@ export default function Card({ card }) {
                     duration: 1,
                     y: "-120%",
                     x: 100,
-                    opacity:0.1,
+                    opacity: 0.1,
+                    onComplete: () => { window.open(liveUrl, "_blank") }
                 })
                 .to("#go", {
                     duration: 1,
                     y: "0%",
                     x: 0,
-                    opacity:1,
-                    onComplete: () => { window.open(liveUrl, "_blank") }
+                    opacity: 1,
                 })
         }, [parentRef])
 
@@ -54,7 +54,7 @@ export default function Card({ card }) {
                 .to("#git", {
                     scale: 1,
                     rotate: 0,
-                    // onComplete: () => { window.open(gitHubUrl, "_blank") }
+                    onComplete: () => { window.open(gitHubUrl, "_blank") }
                 })
 
         }, [parentRef])
@@ -68,7 +68,7 @@ export default function Card({ card }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: .1 }}
             transition={{ duration: 0.4 }}
-            className='w-[300px] h-[470px] md:w-[400px] md:min-h-[500px] rounded-lg shadow-lg shadow-black flex flex-col items-start justify-evenly cursor-pointer p-2'
+            className='shadow w-[300px] h-[470px] md:w-[400px] md:min-h-[500px] rounded-lg flex flex-col items-start justify-evenly cursor-pointer p-2'
             ref={parentRef}>
 
             <img loading='lazy' src={card.pic} alt="" srcSet="" />
@@ -93,9 +93,9 @@ export default function Card({ card }) {
 
                 <div className='w-full flex justify-evenly items-center'>
 
-                    <div onClick={() => handleGo(card.live)} className='text-1xl text-center font-bold w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-teal-400'>Live <img id='go' className='w-6' src={go} alt="" srcSet="" /></div>
+                    <div onClick={() => handleGo(card.live)} className='text-1xl text-center font-bold w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-btnHover1'>Live <img id='go' className='w-6' src={go} alt="" srcSet="" /></div>
 
-                    <div onClick={() => handleGit(card.git)} className='text-1xl text-center w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-teal-400'>Github<img id='git' className='w-6' src={git} alt="" srcSet="" /></div>
+                    <div onClick={() => handleGit(card.git)} className='text-1xl text-center font-bold w-[100px] bg-yellow-400 rounded-lg p-2 flex items-center justify-center gap-2 overflow-hidden hover:bg-btnHover1'>Github<img id='git' className='w-6' src={git} alt="" srcSet="" /></div>
 
                 </div>
 

@@ -14,6 +14,7 @@ import weather from "../../assets/weather.png"
 import trailflix from "../../assets/trailflix.jpg"
 import translate from "../../assets/translate.png"
 import hirehub from "../../assets/hirehub.png"
+import web_book from "../../assets/web_book.png"
 import anime from "../../assets/animePic.png"
 
 export default function Projects() {
@@ -21,9 +22,20 @@ export default function Projects() {
   const mode = useSelector(selectMode)
   const ref = useRef()
   const [projects, setProjects] = useState()
-  const [bg,setBg] = useState("Mern")
+  const [bg, setBg] = useState("Mern")
+
+  const languageArr = ["All", "React", "Javascript", "Mern"]
 
   let project = [{
+    name: "Web Book",
+    pic: web_book,
+    stack: ["MERN"],
+    date: "Sep 10 - Oct 19",
+    desc: "This Project is about building an note web app with extra added features like task, mcq, interview and feeds. This app consists of chat,live notification,live messages,schedule task etc.",
+    live: "https://arya-web-book.netlify.app/",
+    git: "https://github.com/Arya-Kishan/mern_web_book",
+    category: "mern"
+  }, {
     name: "Hirehub",
     pic: hirehub,
     stack: ["MERN", "Nodemailer", "Cloudinary"],
@@ -32,7 +44,7 @@ export default function Projects() {
     live: "https://arya-hirehub.netlify.app",
     git: "https://github.com/Arya-Kishan/hirehub-frontend",
     category: "mern"
-  },{
+  }, {
     name: "Chat App",
     pic: chatAppImg,
     stack: ["MERN"],
@@ -41,7 +53,7 @@ export default function Projects() {
     live: "https://arya-chat-mern.netlify.app/",
     git: "https://github.com/Arya-Kishan/MERN_CHAT_CLIENT",
     category: "mern"
-  },{
+  }, {
     name: "Aryazon",
     pic: aryazon,
     stack: ["MERN", "Nodemailer", "Cloudinary"],
@@ -68,7 +80,7 @@ export default function Projects() {
     live: "https://arya-translator.netlify.app/",
     git: "https://github.com/Arya-Kishan/AryaLingo",
     category: "react"
-  },{
+  }, {
     name: "AnimeBook",
     pic: anime,
     stack: ["react", "tailwind"],
@@ -194,10 +206,9 @@ export default function Projects() {
       <div className={`${mode} w-full text-5xl text-center uppercase`}>My <span className='text-yellow-600'>Creative</span> Section</div>
 
       <div className={`w-[100%] md:w-[100%] flex justify-evenly md:px-60 py-6 gap-2 ${mode} text-[12px] md:text-xl`}>
-        <p onClick={() => changeCategory("All")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == "All" ? "bg-yellow-600" : ""}`}>All</p>
-        <p onClick={() => changeCategory("React")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == "React" ? "bg-yellow-600" : ""}`}>React</p>
-        <p onClick={() => changeCategory("Javascript")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == "Javascript" ? "bg-yellow-600" : ""}`}>Javascript</p>
-        <p onClick={() => changeCategory("Mern")} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == "Mern" ? "bg-yellow-600" : ""}`}>MERN</p>
+        {languageArr.map((e) => (
+          <p onClick={() => changeCategory(e)} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == e ? "bg-yellow-600" : ""}`}>{e}</p>
+        ))}
       </div>
 
       <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-center md:justify-evenly p-10`}>

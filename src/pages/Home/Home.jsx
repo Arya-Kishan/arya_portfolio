@@ -10,12 +10,12 @@ import Animate from '../Animate/Animate'
 export default function Home() {
     return (
         <div>
-            <Animate/>
+            <Animate />
             {/* <Navbar />
             <Banner /> */}
-            <About />
-            <Skills />
             <Projects />
+            <Skills />
+            <About />
             <Contact />
         </div>
     )

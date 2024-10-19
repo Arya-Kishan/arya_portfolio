@@ -29,7 +29,7 @@ export default function Contact() {
   }
 
   return (
-    <div id='contact' className={`${mode} w-full min-h-[120vh] md:min-h-[100vh]`}>
+    <div id='contact' className={`${mode} w-full min-h-[120vh] h-[130vh] md:min-h-[100vh] md:h-[110vh]`}>
 
       <motion.div
         initial={{ opacity: 0, y: -100 }}

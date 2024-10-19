@@ -70,16 +70,16 @@
 }
 
 .light {
-    background-color: rgb(255, 255, 254);
-    color: black;
-    border-color: black;
+    color: white;
+    background: linear-gradient(to right, #110229, #11012b);
+    border-color: white;
 }
 
 .dark {
+    color: black;
     // background-color: rgb(12, 12, 0);
-    background: linear-gradient(to right ,rgb(9, 9, 0),rgb(18, 18, 2),rgb(9, 9, 0));
-    color: white;
-    border-color: white;
+    background-color: rgb(255, 255, 245);
+    border-color: black;
 }
 
 .cube {

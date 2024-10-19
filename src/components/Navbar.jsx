@@ -40,7 +40,7 @@ export default function Navbar() {
     }, [])
 
     return (
-        <nav ref={parentRef} className={`${mode} w-full h-[70px] flex justify-between px-5 sticky top-0 left-0 z-10`}>
+        <nav ref={parentRef} className={`${mode} w-full h-[70px] flex justify-between px-5 z-10`}>
 
             <div id='port' className='flex justify-center items-center text-3xl font-bold'>
                 <span className='tracking-wide'>Port</span>
@@ -48,7 +48,7 @@ export default function Navbar() {
             </div>
 
             <div className='w-full flex items-center justify-end gap-10'>
-                
+
                 <ul className='hidden md:flex justify-evenly items-center gap-5 text-xl font-sans font-semibold'>
                     <li id='links'><a href="#banner">Home</a></li>
                     <li id='links'><a href="#about">About</a></li>
