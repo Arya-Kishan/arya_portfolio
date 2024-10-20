@@ -2,20 +2,20 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
 import Card from '../../components/Card'
-import trailify from "../../assets/trailify.png"
-import aryazon from "../../assets/aryazon.png"
-import quiz from "../../assets/quiz.png"
-import tic from "../../assets/tic.png"
-import news from "../../assets/news.png"
-import chatAppImg from "../../assets/chatAppImg.png"
-import pika from "../../assets/pika.png"
-import hangman from "../../assets/hangman.png"
-import weather from "../../assets/weather.png"
-import trailflix from "../../assets/trailflix.jpg"
-import translate from "../../assets/translate.png"
-import hirehub from "../../assets/hirehub.png"
-import web_book from "../../assets/web_book.png"
-import anime from "../../assets/animePic.png"
+import trailify from "../../assets/project_images/trailify.png"
+import aryazon from "../../assets/project_images/aryazon.png"
+import quiz from "../../assets/project_images/quiz.png"
+import tic from "../../assets/project_images/tic.png"
+import news from "../../assets/project_images/news.png"
+import chatAppImg from "../../assets/project_images/chatAppImg.png"
+import pika from "../../assets/project_images/pika.png"
+import hangman from "../../assets/project_images/hangman.png"
+import weather from "../../assets/project_images/weather.png"
+import trailflix from "../../assets/project_images/trailflix.jpg"
+import translate from "../../assets/project_images/translate.png"
+import hirehub from "../../assets/project_images/hirehub.png"
+import web_book from "../../assets/project_images/web_book.png"
+import anime from "../../assets/project_images/animePic.png"
 
 export default function Projects() {
 
@@ -211,7 +211,7 @@ export default function Projects() {
         ))}
       </div>
 
-      <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-center md:justify-evenly p-10`}>
+      <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-center md:justify-between p-10`}>
         {projects?.map((e, i) => <Card key={i} card={e} />)}
       </div>
 

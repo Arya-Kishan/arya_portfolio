@@ -155,13 +155,13 @@ export default function Animate() {
 
           <div className='flex gap-10'>
 
-            <a href="https://www.linkedin.com/in/arya-kishan-4b49a4284/"><img id='icon' className={`w-8 p-1 rounded-lg cursor-pointer`} src={mode == "light" ? linkedIn : linkedIn2} alt="" srcSet="" /></a>
+            <a href="https://www.linkedin.com/in/arya-kishan-4b49a4284/"><img id='icon' className={`w-8 p-1 rounded-lg cursor-pointer`} src={linkedIn} alt="" srcSet="" /></a>
 
-            <a href="https://twitter.com/_arya_kishan_"><img id='icon' className={`w-8 p-1 rounded-lg cursor-pointer`} src={mode == "light" ? Twitter : Twitter2} alt="" srcSet="" /></a>
+            <a href="https://twitter.com/_arya_kishan_"><img id='icon' className={`w-8 p-1 rounded-lg cursor-pointer`} src={Twitter} alt="" srcSet="" /></a>
 
-            <a href="https://github.com/Arya-Kishan"><img id='icon' className={`w-8 p-1 rounded-lg cursor-pointer`} src={mode == "light" ? Github : Github2} alt="" srcSet="" /></a>
+            <a href="https://github.com/Arya-Kishan"><img id='icon' className={`w-8 p-1 rounded-lg cursor-pointer`} src={Github} alt="" srcSet="" /></a>
 
-            <a href="mailto:arya12345kishan@gmail.com"><img id='icon' className={`w-8 p-1 rounded-lg cursor-pointer`} src={mode == "light" ? Gmail : Gmail2} alt="" srcSet="" /></a>
+            <a href="mailto:arya12345kishan@gmail.com"><img id='icon' className={`w-8 p-1 rounded-lg cursor-pointer`} src={Gmail} alt="" srcSet="" /></a>
 
           </div>
 

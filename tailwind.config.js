@@ -12,7 +12,7 @@ export default {
         "btnColor1": "#FACC15",
         "cardShadow1": "#FACC15",
         "btnColor2": "#14195B",
-        "btnHover1": "#CA8A04",
+        "btnHover1": "#012854",
         "txtColor1": "white",
       }
     },

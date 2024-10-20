@@ -68,7 +68,7 @@ export default function Card({ card }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: .1 }}
             transition={{ duration: 0.4 }}
-            className='shadow w-[300px] h-[470px] md:w-[400px] md:min-h-[500px] rounded-lg flex flex-col items-start justify-evenly cursor-pointer p-2'
+            className='shadow w-full h-[470px] sm:w-[45%] md:w-[47%] md:min-h-[500px] lg:w-[30%] rounded-lg flex flex-col items-start justify-evenly cursor-pointer p-2'
             ref={parentRef}>
 
             <img loading='lazy' src={card.pic} alt="" srcSet="" />
