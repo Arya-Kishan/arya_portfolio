@@ -12,6 +12,7 @@ import pika from "../../assets/project_images/pika.png"
 import hangman from "../../assets/project_images/hangman.png"
 import weather from "../../assets/project_images/weather.png"
 import trailflix from "../../assets/project_images/trailflix.jpg"
+import atto from "../../assets/project_images/atto.jpg"
 import translate from "../../assets/project_images/translate.png"
 import hirehub from "../../assets/project_images/hirehub.png"
 import web_book from "../../assets/project_images/web_book.png"
@@ -24,7 +25,7 @@ export default function Projects() {
   const [projects, setProjects] = useState()
   const [bg, setBg] = useState("Mern")
 
-  const languageArr = ["All", "React", "Javascript", "Mern"]
+  const languageArr = ["All", "React", "Javascript", "Mern","React Native"]
 
   let project = [{
     name: "Web Book",
@@ -152,6 +153,15 @@ export default function Projects() {
     live: "https://arya-kishan.github.io/Javascript-Trailflix/",
     git: "https://github.com/Arya-Kishan/Javascript-Trailflix",
     category: "javascript"
+  },{
+    name: "Atto",
+    pic: atto,
+    stack: ["React Native","Expo"],
+    date: "April 01 - April 10",
+    desc: "Atto is a modern, intuitive React Native application. Whether it's your home, bathroom, or any household space, Atto lets users book service slots with ease — based on time, availability, and pricing.",
+    live: "https://drive.google.com/uc?export=download&id=185xzwwVi8kOW-5Zkcqe6MxlEdKE69b01",
+    git: "https://github.com/Arya-Kishan/Javascript-Trailflix",
+    category: "react_native"
   },]
 
   const changeCategory = (category) => {
@@ -173,6 +183,12 @@ export default function Projects() {
       let categoryProjects = project.filter((e) => e.category == "javascript")
       setProjects(categoryProjects)
       setBg("Javascript")
+
+    } else if (category == "React Native") {
+
+      let categoryProjects = project.filter((e) => e.category == "react_native")
+      setProjects(categoryProjects)
+      setBg("React Native")
 
     } else {
 
