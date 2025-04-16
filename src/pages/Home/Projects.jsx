@@ -25,7 +25,7 @@ export default function Projects() {
   const [projects, setProjects] = useState()
   const [bg, setBg] = useState("Mern")
 
-  const languageArr = ["All", "React", "Javascript", "Mern","React Native"]
+  const languageArr = ["All", "React", "Javascript", "Mern", "React Native"]
 
   let project = [{
     name: "Web Book",
@@ -153,16 +153,16 @@ export default function Projects() {
     live: "https://arya-kishan.github.io/Javascript-Trailflix/",
     git: "https://github.com/Arya-Kishan/Javascript-Trailflix",
     category: "javascript"
-  },{
+  }, {
     name: "Atto",
     pic: atto,
-    stack: ["React Native","Expo"],
+    stack: ["React Native", "Expo"],
     date: "April 01 - April 10",
     desc: "Atto is a modern, intuitive React Native application. Whether it's your home, bathroom, or any household space, Atto lets users book service slots with ease — based on time, availability, and pricing.",
     live: "https://drive.google.com/uc?export=download&id=185xzwwVi8kOW-5Zkcqe6MxlEdKE69b01",
-    git: "https://github.com/Arya-Kishan/Javascript-Trailflix",
+    git: "https://github.com/Arya-Kishan/atto_app",
     category: "react_native"
-  },]
+  }]
 
   const changeCategory = (category) => {
 
@@ -217,17 +217,17 @@ export default function Projects() {
   }, [])
 
   return (
-    <div id='project' ref={ref} className='flex flex-col justify-center items-center overflow-hidden'>
+    <div id='project' ref={ref} className='flex flex-col justify-center items-center'>
 
       <div className={`${mode} w-full text-5xl text-center uppercase`}>My <span className='text-yellow-600'>Creative</span> Section</div>
 
-      <div className={`w-[100%] md:w-[100%] flex justify-evenly md:px-60 py-6 gap-2 ${mode} text-[12px] md:text-xl`}>
+      <div className={`w-[100%] md:w-[100%] flex flex-wrap justify-evenly md:px-60 py-16 gap-2 ${mode} text-[12px] md:text-xl`}>
         {languageArr.map((e) => (
           <p onClick={() => changeCategory(e)} className={`border-2 border-yellow-500 shadow-lg rounded-lg px-3 py-1 md:px-5 md:py-2 cursor-pointer hover:bg-yellow-400 ${bg == e ? "bg-yellow-600" : ""}`}>{e}</p>
         ))}
       </div>
 
-      <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-center justify-center md:justify-between p-10`}>
+      <div className={`${mode} w-full min-h-[100vh] flex flex-wrap gap-10 items-start justify-center md:justify-between px-10`}>
         {projects?.map((e, i) => <Card key={i} card={e} />)}
       </div>
 

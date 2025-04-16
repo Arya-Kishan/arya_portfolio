@@ -2,14 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-.shadow{
+.shadow {
     box-shadow: 0 0 8px 4px #012854;
+}
+
+
+.blob-box {
+    background: #fbff00;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transition: all 0.3s ease-in-out;
+    animation: morph 6s infinite ease-in-out;
+    overflow: hidden
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
 }

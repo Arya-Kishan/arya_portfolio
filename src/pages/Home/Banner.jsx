@@ -6,7 +6,7 @@ import Github from '../../assets/github.png'
 import Gmail from '../../assets/gmail.png'
 import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
-import aryaCV from "../../assets/aryaCV.pdf"
+import aryaCV from "../../assets/arya/aryaCV.pdf"
 import gsap from 'gsap'
 
 

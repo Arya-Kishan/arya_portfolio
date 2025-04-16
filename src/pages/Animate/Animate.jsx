@@ -10,7 +10,8 @@ import Twitter2 from '../../assets/twitterIcon2.svg'
 import Github2 from '../../assets/githubIcon2.svg'
 import Gmail2 from '../../assets/emailIcon2.svg'
 import banner from '../../assets/banner.svg'
-import aryaCV from "../../assets/aryaCV.pdf"
+import aryaImg from '../../assets/arya/self_ghibli.png'
+import aryaCV from "../../assets/arya/aryaCV.pdf"
 import Navbar from '../../components/Navbar'
 import { useSelector } from 'react-redux'
 import { selectMode } from '../../Redux/ModeSlice'
@@ -144,14 +145,14 @@ export default function Animate() {
 
       </div>
 
-      <div className={`${mode} whitePageDown w-full h-[100vh] absolute top-full left-0 z-8 grid grid-cols-1 lg:grid-cols-2 p-2 overflow-hidden`}>
+      <div className={`${mode} whitePageDown w-full h-[100vh] absolute top-full left-0 z-8 grid grid-cols-1 md:grid-cols-2 p-2 overflow-hidden`}>
 
-        <div className='leftContent opacity-0 w-full flex flex-col items-center lg:items-start justify-end md:justify-end lg:justify-center gap-8 z-9 lg:pl-40 font-sans'>
+        <div className='leftContent opacity-0 w-full flex flex-col items-center lg:items-start justify-end md:justify-center gap-8 z-9 lg:pl-40 font-sans'>
 
           <div className='w-full flex flex-col items-center lg:items-start justify-center gap-3'>
-            <div className='text-xl md:text-4xl lg:text-5xl overflow-hidden '><p id='name1' className='translate-y-20 pl-1'>Hii I'm</p></div>
-            <div className='text-3xl md:text-5xl lg:text-7xl overflow-hidden'><p id='name2' className='translate-y-20'>Arya Kishan</p></div>
-            <div className='text-xl md:text-4xl lg:text-5xl overflow-hidden'><p id='name3' className='translate-y-20'>React Developer</p></div>
+            <div className='text-xl md:text-4xl lg:text-6xl overflow-hidden '><p id='name1' className='translate-y-20 pl-1'>Hii,</p></div>
+            <div className='text-3xl md:text-5xl lg:text-8xl overflow-hidden'><p id='name2' className='translate-y-20'>I'm <span className='text-btnColor1'>Arya Kishan</span></p></div>
+            <div className='text-xl md:text-4xl lg:text-6xl overflow-hidden'><p id='name3' className='translate-y-20'>Mern Developer</p></div>
           </div>
 
           <div className='flex gap-10'>
@@ -167,14 +168,18 @@ export default function Animate() {
           </div>
 
           <div className='flex gap-10 overflow-hidden'>
-            <button className='text-1xl md:text-xl bg-btnColor1 rounded-lg px-3 py-2'><a href={aryaCV} download="">Download CV</a></button>
-            <button className='text-1xl md:text-xl bg-btnColor1 rounded-lg px-3 py-2'><a href="#contact">Contact</a></button>
+            <button className='w-[150px] text-1xl md:text-xl bg-btnColor1 rounded-lg px-3 py-2'><a href={aryaCV} download="">Download CV</a></button>
+            <button className='w-[150px] text-1xl md:text-xl border-2 border-btnColor1 rounded-lg px-3 py-2 text-btnColor1'><a href="#contact">Contact</a></button>
           </div>
 
         </div>
 
-        <div className='rightContent opacity-0 w-full flex justify-center overflow-hidden z-9'>
-          <img src={banner} className='w-[70%] md:w-[40%] lg:w-[60%]' alt="" srcset="" />
+        <div className='rightContent opacity-0 w-full flex justify-center items-center overflow-hidden z-9'>
+          <div className='blob-box w-[240px] sm:w-[300px] md:w-[350px] lg:w-[500px] h-[240px] sm:h-[300px] md:h-[350px] lg:h-[500px]'>
+            <img src={aryaImg} className='h-full w-full object-contain' alt="" srcset="" />
+            <div>
+            </div>
+          </div>
         </div>
 
       </div>

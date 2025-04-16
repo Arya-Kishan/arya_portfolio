@@ -23,7 +23,7 @@ export default function Skills() {
 
 
   return (
-    <div id='skill' className={`${mode} min-h-[100vh]`}>
+    <div id='skill' className={`${mode} h-fit py-20`}>
 
       <div className={`w-full text-5xl text-center uppercase`}><span className='text-yellow-600'>Technical</span> Skills</div>
 
