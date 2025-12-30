@@ -30,8 +30,11 @@ export default function About() {
   }]
 
   let experience = [{
-    company: "Prodigy Infotech",
-    work: "Internship - 1 Months"
+    company: "Chordify",
+    work: " Application Development Trainee - 9 Months"
+  },{
+    company: "ATG",
+    work: "Web Development Internship - 6 Months"
   }, {
     company: "Codsoft",
     work: "Internship - 1 Months"
@@ -70,8 +73,8 @@ export default function About() {
 
           {/* BUTTONS EDUCATION AND EXPERINCE */}
           <div className='w-fll flex justify-evenly'>
-            <button className='w-[40%] bg-yellow-400 p-2 rounded-md' onClick={e => setData(true)}>Education</button>
-            <button className='w-[40%] bg-yellow-400 p-2 rounded-md' onClick={e => setData(false)}>Experience</button>
+            <button className={`w-[40%] ${data ?'bg-yellow-400' : ''} p-2 rounded-md border-2 border-yellow-400`} onClick={e => setData(true)}>Education</button>
+            <button className={`w-[40%] ${!data ?'bg-yellow-400' : ''} p-2 rounded-md border-2 border-yellow-400`} onClick={e => setData(false)}>Experience</button>
           </div>
 
           {/* EDUCATION */}

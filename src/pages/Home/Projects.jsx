@@ -17,6 +17,7 @@ import translate from "../../assets/project_images/translate.png"
 import hirehub from "../../assets/project_images/hirehub.png"
 import web_book from "../../assets/project_images/web_book.png"
 import anime from "../../assets/project_images/animePic.png"
+import palm from "../../assets/project_images/palm.png"
 
 export default function Projects() {
 
@@ -161,6 +162,15 @@ export default function Projects() {
     desc: "Atto is a modern, intuitive React Native application. Whether it's your home, bathroom, or any household space, Atto lets users book service slots with ease — based on time, availability, and pricing.",
     live: "https://drive.google.com/uc?export=download&id=185xzwwVi8kOW-5Zkcqe6MxlEdKE69b01",
     git: "https://github.com/Arya-Kishan/atto_app",
+    category: "react_native"
+  }, {
+    name: "PalmR8D",
+    pic: palm,
+    stack: ["React Native", "Firebase"],
+    date: "May 13 - December 13",
+    desc: "PalmR8D (pronounced is an AI-native social validation marketplace platform, it's a combination of social media and food delivery applications, PalmR8D lets us discover, rate, and rank trusted local places",
+    live: "https://play.google.com/store/apps/details?id=com.palmr8d.app",
+    git: "https://github.com/labchordify/PalmR8D_FE",
     category: "react_native"
   }]
 
