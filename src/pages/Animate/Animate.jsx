@@ -5,12 +5,6 @@ import linkedIn from '../../assets/linkedin.png'
 import Twitter from '../../assets/twitter.png'
 import Github from '../../assets/github.png'
 import Gmail from '../../assets/gmail.png'
-import linkedIn2 from '../../assets/linkedIcon2.svg'
-import Twitter2 from '../../assets/twitterIcon2.svg'
-import Github2 from '../../assets/githubIcon2.svg'
-import Gmail2 from '../../assets/emailIcon2.svg'
-import banner from '../../assets/banner.svg'
-import aryaImg from '../../assets/arya/self_ghibli.png'
 import aryaCV from "../../assets/arya/aryaCV.pdf"
 import Navbar from '../../components/Navbar'
 import { useSelector } from 'react-redux'
@@ -152,7 +146,8 @@ export default function Animate() {
           <div className='w-full flex flex-col items-center lg:items-start justify-center gap-3'>
             <div className='text-xl md:text-4xl lg:text-6xl overflow-hidden '><p id='name1' className='translate-y-20 pl-1'>Hii,</p></div>
             <div className='text-3xl md:text-5xl lg:text-8xl overflow-hidden'><p id='name2' className='translate-y-20'>I'm <span className='text-btnColor1'>Arya Kishan</span></p></div>
-            <div className='text-xl md:text-4xl lg:text-6xl overflow-hidden'><p id='name3' className='translate-y-20'>Mern Developer</p></div>
+            <div className='text-xl md:text-4xl lg:text-6xl overflow-hidden'><p id='name3' className='translate-y-20'>Full-Stack Developer</p></div>
+            <div className='text-xl md:text-4xl lg:text-6xl overflow-hidden'><p id='name3' className='translate-y-20 text-btnColor1'>(MERN | React Native)</p></div>
           </div>
 
           <div className='flex gap-10'>
@@ -176,7 +171,7 @@ export default function Animate() {
 
         <div className='rightContent opacity-0 w-full flex justify-center items-center overflow-hidden z-9'>
           <div className='blob-box w-[240px] sm:w-[300px] md:w-[350px] lg:w-[500px] h-[240px] sm:h-[300px] md:h-[350px] lg:h-[500px]'>
-            <img src={aryaImg} className='h-full w-full object-contain' alt="" srcset="" />
+            <img src={"https://res.cloudinary.com/djqulaiq6/image/upload/v1767369892/self_ghibli_dcrp40.png"} className='h-full w-full object-contain' alt="" srcset="" />
             <div>
             </div>
           </div>

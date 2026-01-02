@@ -2,22 +2,6 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
 import Card from '../../components/Card'
-import trailify from "../../assets/project_images/trailify.png"
-import aryazon from "../../assets/project_images/aryazon.png"
-import quiz from "../../assets/project_images/quiz.png"
-import tic from "../../assets/project_images/tic.png"
-import news from "../../assets/project_images/news.png"
-import chatAppImg from "../../assets/project_images/chatAppImg.png"
-import pika from "../../assets/project_images/pika.png"
-import hangman from "../../assets/project_images/hangman.png"
-import weather from "../../assets/project_images/weather.png"
-import trailflix from "../../assets/project_images/trailflix.jpg"
-import atto from "../../assets/project_images/atto.jpg"
-import translate from "../../assets/project_images/translate.png"
-import hirehub from "../../assets/project_images/hirehub.png"
-import web_book from "../../assets/project_images/web_book.png"
-import anime from "../../assets/project_images/animePic.png"
-import palm from "../../assets/project_images/palm.png"
 
 export default function Projects() {
 
@@ -30,7 +14,7 @@ export default function Projects() {
 
   let project = [{
     name: "Web Book",
-    pic: web_book,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366837/web_book_xf6ae2.png",
     stack: ["MERN"],
     date: "Sep 10 - Oct 19",
     desc: "This Project is about building an note web app with extra added features like task, mcq, interview and feeds. This app consists of chat,live notification,live messages,schedule task etc.",
@@ -39,7 +23,7 @@ export default function Projects() {
     category: "mern"
   }, {
     name: "Hirehub",
-    pic: hirehub,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366835/hirehub_oj2wmj.png",
     stack: ["MERN", "Nodemailer", "Cloudinary"],
     date: "Mar 24 - April 20",
     desc: "This project is about building a combination of job portal and social media web application including all basic features of job and social apps with jwt,responsive,PRO features,Razorpay etc..",
@@ -48,7 +32,7 @@ export default function Projects() {
     category: "mern"
   }, {
     name: "Chat App",
-    pic: chatAppImg,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366835/chatAppImg_aed1ph.png",
     stack: ["MERN"],
     date: "Mar 23 - April 20",
     desc: "This project is about building an online Chat web application with showing the functionalities of chat app like connecting with friends, real time chat, create Group, show active time etc",
@@ -57,7 +41,7 @@ export default function Projects() {
     category: "mern"
   }, {
     name: "Aryazon",
-    pic: aryazon,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366834/aryazon_mslmsr.png",
     stack: ["MERN", "Nodemailer", "Cloudinary"],
     date: "Mar 23 - April 20",
     desc: "This project is about building an online E-commerce web application with Admin Panel showing the functionalities of an e-commerce website like filtering the products, payment integration, add to cart, wishlist etc",
@@ -66,7 +50,7 @@ export default function Projects() {
     category: "mern"
   }, {
     name: "Trailify",
-    pic: trailify,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366837/trailify_rd31v0.png",
     stack: ["react", "redux"],
     date: "Oct 25 - Nov 30",
     desc: "A movie app similar to trailflix app which made earlier in JS but now with react with more features and better UI  with Firebase implementation",
@@ -75,7 +59,7 @@ export default function Projects() {
     category: "react"
   }, {
     name: "Aryalingo",
-    pic: translate,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366836/translate_xmw6bu.png",
     stack: ["typescript", "redux", "tailwind"],
     date: "Feb 25 - Mar 24",
     desc: "A Translator app where you can learn the different languages and attend quiz in the end, you can also translate words into list of  different languages etc... ",
@@ -84,7 +68,7 @@ export default function Projects() {
     category: "react"
   }, {
     name: "AnimeBook",
-    pic: anime,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366835/animePic_hbtnu9.png",
     stack: ["react", "tailwind"],
     date: "Feb 25 - Mar 24",
     desc: "A Anime app where you can explore the different anime's and manga's, check their details, character, character details, search anime and different categories etc... ",
@@ -93,7 +77,7 @@ export default function Projects() {
     category: "react"
   }, {
     name: "Pokedox",
-    pic: pika,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366836/pika_tqg65x.png",
     stack: ["react", "gsap"],
     date: "Dec 08 - Dec 12",
     desc: "A animated pokemon app like pokedox to check the details of any pokemon and search their ability and characteristics ",
@@ -102,7 +86,7 @@ export default function Projects() {
     category: "react"
   }, {
     name: "Weather",
-    pic: weather,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366837/weather_drvwpe.png",
     stack: ["react", "Speech Api"],
     date: "Dec 22 - Dec 30",
     desc: "It's a web app to show the weather forecast details using weather API & you will be able to search for all the weather details for any city in the world & it also detects your current location show the weather data.",
@@ -111,7 +95,7 @@ export default function Projects() {
     category: "react"
   }, {
     name: "Quiz",
-    pic: quiz,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366836/quiz_apzbn0.png",
     stack: ["react"],
     date: "Aug 22 - Aug 30",
     desc: "A quiz app which is a form of game or mind sport in which players attempt to answer questions correctly on one or several specific topics and get points for correct answer...",
@@ -120,7 +104,7 @@ export default function Projects() {
     category: "react"
   }, {
     name: "News",
-    pic: news,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366835/news_n7xygx.png",
     stack: ["react"],
     date: "Oct 10 - Oct 21",
     desc: "A News App made with react and Rapid Api which shows latest news of various categories like Entertainment,Technology,Sports,Science etc..",
@@ -129,7 +113,7 @@ export default function Projects() {
     category: "react"
   }, {
     name: "Tic Tac Toe",
-    pic: tic,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366836/tic_xoukp5.png",
     stack: ["Html", "CSS", "Javascript"],
     date: "Apr 23 - Apr 30",
     desc: "Tic-tac-toe is a game where two players take turns marking cells in a grid with X's or O's. The goal is to be the first player to get three of the same symbols in a row, either vertically, horizontally, or diagonally. ...",
@@ -138,7 +122,7 @@ export default function Projects() {
     category: "javascript"
   }, {
     name: "Hangman",
-    pic: hangman,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366834/hangman_hcsk5f.png",
     stack: ["Html", "CSS", "Javascript"],
     date: "Sep 23 - Oct 04",
     desc: "Hangman is a guessing game for one player. One player thinks of a word and tries to guess it by suggesting letters within a certain number of guesses",
@@ -147,7 +131,7 @@ export default function Projects() {
     category: "javascript"
   }, {
     name: "Trailflix",
-    pic: trailflix,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366836/trailflix_wyxyac.jpg",
     stack: ["Html", "CSS", "Javascript"],
     date: "Aug 15 - Sep 04",
     desc: "A movie app where user can check out the trailer of latest popular trending movies.User can search for the different categories like horror,Crime,Action,Fantasy etc..",
@@ -156,16 +140,16 @@ export default function Projects() {
     category: "javascript"
   }, {
     name: "Atto",
-    pic: atto,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366835/atto_ooj5ru.jpg",
     stack: ["React Native", "Expo"],
     date: "April 01 - April 10",
     desc: "Atto is a modern, intuitive React Native application. Whether it's your home, bathroom, or any household space, Atto lets users book service slots with ease — based on time, availability, and pricing.",
-    live: "https://drive.google.com/uc?export=download&id=185xzwwVi8kOW-5Zkcqe6MxlEdKE69b01",
+    live: "https://drive.google.com/uc?export=download&id=10U1ZHxcawKiz52YUzREVDGMc2s1SmPn1",
     git: "https://github.com/Arya-Kishan/atto_app",
     category: "react_native"
   }, {
     name: "PalmR8D",
-    pic: palm,
+    pic: "https://res.cloudinary.com/djqulaiq6/image/upload/v1767366836/palm_k6sler.png",
     stack: ["React Native", "Firebase"],
     date: "May 13 - December 13",
     desc: "PalmR8D (pronounced is an AI-native social validation marketplace platform, it's a combination of social media and food delivery applications, PalmR8D lets us discover, rate, and rank trusted local places",

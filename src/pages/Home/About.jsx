@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from 'react'
 import { selectMode } from '../../Redux/ModeSlice'
 import { useSelector } from 'react-redux'
-import coding from '../../assets/coding.svg'
 import lpu from '../../assets/lpu.png'
 import presidency from '../../assets/presidency.png'
 import sunbeam from '../../assets/sunbeam.png'
@@ -56,7 +55,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0 }}
           transition={{ duration: 1 }}
-          className='w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full p-2 border-2 border-solid border-white-700' src={coding} alt="" srcSet="" />
+          className='w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full p-2 border-2 border-solid border-white-700' src={"https://res.cloudinary.com/djqulaiq6/image/upload/v1767369770/coding_vylb9p.svg"} alt="" srcSet="" />
 
         {/* DETAIL */}
         <motion.div
@@ -77,7 +76,8 @@ export default function About() {
             <button className={`w-[40%] ${!data ?'bg-yellow-400' : ''} p-2 rounded-md border-2 border-yellow-400`} onClick={e => setData(false)}>Experience</button>
           </div>
 
-          {/* EDUCATION */}
+          <div className='w-full min-h-[280px]'>
+            {/* EDUCATION */}
           {data && <div className='w-full h-full flex flex-col gap-10 p-5'>
             {education.map((e, i) => (
               <div key={i} className='flex gap-5'>
@@ -100,6 +100,7 @@ export default function About() {
               </div>
             ))}
           </div>}
+          </div>
 
         </motion.div>
 
